@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CGR Fabrication — scaffolding, rental and custom fabrication solutions in Puducherry.">
+  <title>CGR Fabrication | Scaffolding & Fabrication Solutions</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text-xs: clamp(.75rem, .7rem + .25vw, .875rem);
+      --text-sm: clamp(.875rem, .8rem + .35vw, 1rem);
+      --text-base: clamp(1rem, .95rem + .25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + .75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --space-32: 8rem;
+
+      --radius-sm: .375rem;
+      --radius-md: .5rem;
+      --radius-lg: .75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+
+      --font-body: "Satoshi", Arial, sans-serif;
+      --font-display: "Boska", Georgia, serif;
+      --content-wide: 1200px;
+      --transition: 180ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #111417;
+      --surface: #171b1e;
+      --surface-2: #1c2226;
+      --text: #f0f2ed;
+      --muted: #aeb7b9;
+      --faint: #778286;
+      --line: rgba(240, 242, 237, .13);
+      --gold: #f6aa1c;
+      --gold-hover: #ffc454;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-2: #f3f1ec;
+      --text: #172126;
+      --muted: #5d696d;
+      --faint: #7e888a;
+      --line: rgba(23, 33, 38, .13);
+      --gold: #b86f00;
+      --gold-hover: #8c5300;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      min-height: 100dvh;
+      font: var(--text-base)/1.6 var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-wide));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .section {
+      padding-block: clamp(var(--space-16), 8vw, var(--space-32));
+    }
+
+    .section-head {
+      display: grid;
+      gap: var(--space-4);
+      margin-bottom: var(--space-10);
+      max-width: 760px;
+    }
+
+    .section h2 {
+      font: 500 var(--text-2xl)/1.08 var(--font-display);
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .topbar {
+      font-size: var(--text-xs);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .topbar .container {
+      min-height: 2.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: var(--space-5);
+      flex-wrap: wrap;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+    }
+
+    .logo-placeholder {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .logo-mark {
+      width: 2.3rem;
+      aspect-ratio: 1;
+      border: 1px dashed var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: var(--text-xs);
+    }
+
+    .logo-text small {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: var(--text-xs);
+      letter-spacing: .1em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-6);
+      align-items: center;
+      font-size: var(--text-sm);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: var(--space-3);
+      align-items: center;
+    }
+
+    .theme,
+    .menu {
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-full);
+      background: transparent;
+    }
+
+    .btn {
+      min-height: 2.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 var(--space-5);
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #17120a;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-hover);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-2);
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100dvh - 7.75rem);
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          var(--bg) 4%,
+          color-mix(in srgb, var(--bg) 72%, transparent) 52%,
+          color-mix(in srgb, var(--bg) 35%, transparent)
+        ),
+        linear-gradient(0deg, var(--bg) 0%, transparent 45%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e073b00d-130a-5a6a-b24e-580aebd62029/325e6975-a2d1-5f5b-8584-9e34c83c688b.jpg")
+        center/cover;
+    }
+
+    .hero-content {
+      position: relative;
+      padding-block: clamp(var(--space-20), 11vw, var(--space-32));
+    }
+
+    .hero h1 {
+      font: 500 var(--text-3xl)/.95 var(--font-display);
+      max-width: 13ch;
+      letter-spacing: -.03em;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 58ch;
+      color: var(--muted);
+      margin-top: var(--space-6);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-top: var(--space-8);
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+      margin-top: var(--space-12);
+      font-size: var(--text-sm);
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--text);
+      font-size: var(--text-base);
+    }
+
+    .capability {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .capability .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .capability-item {
+      padding: var(--space-6);
+      border-right: 1px solid var(--line);
+    }
+
+    .capability-item:last-child {
+      border-right: 0;
+    }
+
+    .capability-item strong {
+      display: block;
+      font-size: var(--text-lg);
+    }
+
+    .capability-item span {
+      font-size: var(--text-sm);
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr .85fr;
+      gap: var(--space-4);
+    }
+
+    .service {
+      min-height: 15rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+      background: var(--surface-2);
+    }
+
+    .service.featured {
+      grid-row: span 2;
+      min-height: 31rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 80%, transparent), transparent 55%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/01905b5f-f6ed-5d7f-949d-8d453f494892/594dd933-586b-5f47-a120-80cec0c8f64d.jpg")
+        center/cover;
+    }
+
+    .service.featured .service-top {
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      padding: var(--space-4);
+      margin: calc(var(--space-6) * -1);
+      margin-bottom: 0;
+    }
+
+    .service-number {
+      font: var(--text-sm) var(--font-body);
+      color: var(--gold);
+    }
+
+    .service h3 {
+      font: 700 var(--text-lg)/1.15 var(--font-body);
+      margin-top: var(--space-2);
+    }
+
+    .service p {
+      font-size: var(--text-sm);
+      color: var(--muted);
+      margin-top: var(--space-2);
+    }
+
+    .service-arrow {
+      align-self: flex-end;
+      color: var(--gold);
+      font-size: var(--text-xl);
+    }
+
+    .products {
+      background: var(--surface);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+    }
+
+    .product {
+      padding: var(--space-6);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      min-height: 14rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background var(--transition);
+    }
+
+    .product:nth-child(4n) {
+      border-right: 0;
+    }
+
+    .product:hover {
+      background: var(--surface-2);
+    }
+
+    .product .icon {
+      color: var(--gold);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .product h3 {
+      font-size: var(--text-base);
+      margin-top: var(--space-6);
+    }
+
+    .product p {
+      font-size: var(--text-sm);
+      color: var(--muted);
+    }
+
+    .requirements {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: var(--space-10);
+      align-items: start;
+    }
+
+    .requirement-image {
+      position: sticky;
+      top: 7rem;
+      min-height: 34rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 50%, transparent), transparent),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/620bc374-f9d2-5b4a-997d-ebb0de690af9/c3060043-1846-5e01-99c4-8c11a76580fe.jpg")
+        center/cover;
+    }
+
+    .requirement-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .requirement {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      padding: var(--space-6) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .requirement h3 {
+      font-size: var(--text-lg);
+    }
+
+    .requirement p {
+      font-size: var(--text-sm);
+      color: var(--muted);
+      max-width: 44ch;
+    }
+
+    .why {
+      background: var(--gold);
+      color: #181207;
+    }
+
+    .why .eyebrow {
+      color: #664000;
+    }
+
+    .why .section-copy {
+      color: #514019;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      margin-top: var(--space-10);
+    }
+
+    .why-grid article {
+      border-top: 1px solid rgba(23, 18, 10, .24);
+      padding-top: var(--space-4);
+    }
+
+    .why-grid h3 {
+      font-size: var(--text-lg);
+    }
+
+    .why-grid p {
+      color: #4c3a15;
+      margin-top: var(--space-2);
+      font-size: var(--text-sm);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-4);
+    }
+
+    .step {
+      border-top: 1px solid var(--line);
+      padding-top: var(--space-4);
+    }
+
+    .step span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .step h3 {
+      font-size: var(--text-lg);
+      margin-top: var(--space-4);
+    }
+
+    .step p {
+      font-size: var(--text-sm);
+      color: var(--muted);
+      margin-top: var(--space-2);
+    }
+
+    .quote {
+      padding-block: var(--space-20);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .quote-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: end;
+    }
+
+    .quote h2 {
+      font: 500 var(--text-2xl)/1.08 var(--font-display);
+    }
+
+    .quote p {
+      color: var(--muted);
+      margin-top: var(--space-4);
+    }
+
+    .quote-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding-block: var(--space-12);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1fr;
+      gap: var(--space-10);
+    }
+
+    .footer h3 {
+      font-size: var(--text-sm);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gold);
+      margin-bottom: var(--space-4);
+    }
+
+    .footer p,
+    .footer a {
+      font-size: var(--text-sm);
+      color: var(--muted);
+    }
+
+    .footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .footer-bottom {
+      margin-top: var(--space-10);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      color: var(--faint);
+      font-size: var(--text-xs);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .menu-open .nav-links {
+        display: flex;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+        padding: var(--space-6);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .capability .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .capability-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .capability-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service.featured {
+        grid-row: span 1;
+        grid-column: span 2;
+        min-height: 22rem;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .requirements {
+        grid-template-columns: 1fr;
+      }
+
+      .requirement-image {
+        position: relative;
+        top: auto;
+        min-height: 18rem;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quote-inner,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar .container {
+        padding-block: var(--space-2);
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .hero {
+        min-height: 44rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4.2rem);
+      }
+
+      .hero-meta {
+        gap: var(--space-5);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service.featured {
+        grid-column: auto;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product {
+        border-right: 0;
+      }
+
+      .why-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .requirement {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span>Scaffolding • Fabrication • Rental Solutions</span>
+
+      <div class="topbar-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+
+      <a class="logo-placeholder" href="#home">
+        <span class="logo-mark">LOGO</span>
+
+        <span class="logo-text">
+          CGR FABRICATION
+          <small>Logo placeholder</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme" type="button" aria-label="Switch colour theme" data-theme-toggle>
+          ◐
+        </button>
+
+        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+
+        <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-media"></div>
+
+      <div class="container hero-content">
+        <span class="eyebrow">Puducherry’s industrial access partner</span>
+
+        <h1>
+          Built for the <em>work</em> ahead.
+        </h1>
+
+        <p>
+          Scaffolding manufacture, rental and custom fabrication solutions for construction,
+          industrial maintenance, commercial projects and events.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request a Quote →</a>
+          <a class="btn btn-secondary" href="#products">Explore Products</a>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <strong>Scaffolding</strong>
+            <span>Sale & rental solutions</span>
+          </div>
+
+          <div>
+            <strong>Fabrication</strong>
+            <span>Custom-built for your project</span>
+          </div>
+
+          <div>
+            <strong>Puducherry</strong>
+            <span>Local service, project-ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capability">
+      <div class="container">
+        <div class="capability-item">
+          <strong>Scaffolding</strong>
+          <span>Manufacture & supply</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>Rental</strong>
+          <span>Flexible project support</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>Fabrication</strong>
+          <span>Custom industrial work</span>
+        </div>
+
+        <div class="capability-item">
+          <strong>Consultation</strong>
+          <span>Requirement-based solutions</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+
+          <h2>One dependable partner for access and fabrication.</h2>
+
+          <p class="section-copy">
+            From scaffold materials for active sites to project-specific fabrication,
+            CGR brings practical capability together under one roof.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <a class="service featured" href="#products">
+            <div class="service-top">
+              <span class="service-number">01</span>
+              <h3>Scaffolding Systems</h3>
+              <p>Manufacture, supply and practical access solutions for worksites.</p>
+            </div>
+
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a class="service" href="#contact">
+            <div>
+              <span class="service-number">02</span>
+              <h3>Scaffolding Rental</h3>
+              <p>Reliable materials and flexible support for short- or long-duration projects.</p>
+            </div>
+
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a class="service" href="#contact">
+            <div>
+              <span class="service-number">03</span>
+              <h3>Industrial Fabrication</h3>
+              <p>Fabricated structures, equipment and solutions shaped around the job.</p>
+            </div>
+
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a class="service" href="#contact">
+            <div>
+              <span class="service-number">04</span>
+              <h3>Truss & Event Structures</h3>
+              <p>Practical structural support for event, tent and venue requirements.</p>
+            </div>
+
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a class="service" href="#contact">
+            <div>
+              <span class="service-number">05</span>
+              <h3>Custom Machinery</h3>
+              <p>Requirement-led fabrication for specialised operational needs.</p>
+            </div>
+
+            <span class="service-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Product categories</span>
+
+          <h2>Explore solutions by requirement.</h2>
+
+          <p class="section-copy">
+            Product selection and specifications will be expanded from the existing
+            CGR product catalogue during the full build.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <a class="product" href="#contact">
+            <span class="icon">╋</span>
+            <div>
+              <h3>Scaffolding Pipes</h3>
+              <p>Site-ready tube and access material solutions.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">▣</span>
+            <div>
+              <h3>Scaffolding Frames</h3>
+              <p>Reliable frame systems for construction access.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">↕</span>
+            <div>
+              <h3>Adjustable Props</h3>
+              <p>Support components for structural work.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">◫</span>
+            <div>
+              <h3>Accessories</h3>
+              <p>Couplers, fittings and essential components.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">▤</span>
+            <div>
+              <h3>Mobile Towers</h3>
+              <p>Flexible access for maintenance and project work.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">⌁</span>
+            <div>
+              <h3>Rental Materials</h3>
+              <p>Project-duration access equipment support.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">△</span>
+            <div>
+              <h3>Truss Structures</h3>
+              <p>Fabricated truss and event structure solutions.</p>
+            </div>
+          </a>
+
+          <a class="product" href="#contact">
+            <span class="icon">⌘</span>
+            <div>
+              <h3>Custom Fabrication</h3>
+              <p>Made-to-requirement industrial work.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container requirements">
+
+        <div class="requirement-image"></div>
+
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Made for real projects</span>
+
+            <h2>Tell us the requirement. We’ll shape the solution.</h2>
+
+            <p class="section-copy">
+              Whether you need material supply, rental support, fabrication work
+              or a custom-built structure, the right start is a clear project brief.
+            </p>
+          </div>
+
+          <div class="requirement-list">
+
+            <a class="requirement" href="#contact">
+              <div>
+                <h3>Construction Site Access</h3>
+                <p>Scaffolding and support solutions for active building projects.</p>
+              </div>
+              <span>→</span>
+            </a>
+
+            <a class="requirement" href="#contact">
+              <div>
+                <h3>Industrial Maintenance</h3>
+                <p>Practical access equipment for repair, maintenance and inspection work.</p>
+              </div>
+              <span>→</span>
+            </a>
+
+            <a class="requirement" href="#contact">
+              <div>
+                <h3>Renovation & Repairs</h3>
+                <p>Flexible solutions for exterior, interior and structural maintenance.</p>
+              </div>
+              <span>→</span>
+            </a>
+
+            <a class="requirement" href="#contact">
+              <div>
+                <h3>Event & Tent Structures</h3>
+                <p>Truss and structural fabrication for temporary event requirements.</p>
+              </div>
+              <span>→</span>
+            </a>
+
+            <a class="requirement" href="#contact">
+              <div>
+                <h3>Custom Fabrication Requirement</h3>
+                <p>Bring dimensions, reference images or site details for a tailored quote.</p>
+              </div>
+              <span>→</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Why CGR</span>
+
+          <h2>Practical engineering. Direct support. Built to perform.</h2>
+
+          <p class="section-copy">
+            The focus stays on solutions that suit the work,
+            the site and the required timeline.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <article>
+            <h3>Project-led approach</h3>
+            <p>
+              Recommendations begin with your actual requirement,
+              not a generic product pitch.
+            </p>
+          </article>
+
+          <article>
+            <h3>Fabrication capability</h3>
+            <p>
+              Custom industrial work can be planned around specific
+              dimensions and use cases.
+            </p>
+          </article>
+
+          <article>
+            <h3>Flexible support</h3>
+            <p>
+              Choose supply, rental or a tailored fabrication solution
+              based on project needs.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Simple process</span>
+          <h2>From requirement to delivery.</h2>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="step">
+            <span>01</span>
+            <h3>Share your requirement</h3>
+            <p>Tell us what you need, including product, quantity, dimensions and project location.</p>
+          </article>
+
+          <article class="step">
+            <span>02</span>
+            <h3>Receive a quotation</h3>
+            <p>Our team reviews the request and shares the appropriate commercial proposal.</p>
+          </article>
+
+          <article class="step">
+            <span>03</span>
+            <h3>Confirm your order</h3>
+            <p>Finalise the requirement, timeline and payment or rental arrangement.</p>
+          </article>
+
+          <article class="step">
+            <span>04</span>
+            <h3>Delivery & support</h3>
+            <p>Coordinate dispatch, delivery, fabrication or project-specific assistance.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="contact">
+      <div class="container quote-inner">
+
+        <div>
+          <span class="eyebrow">Start a conversation</span>
+
+          <h2>Need scaffolding, rental or fabrication support?</h2>
+
+          <p>
+            Share your project requirement and our team will help you
+            move forward with the right solution.
+          </p>
+        </div>
+
+        <div class="quote-actions">
+          <a class="btn btn-secondary" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+
+          <a class="btn btn-primary" href="mailto:sn@cgrfc.com?subject=Website%20Enquiry%20-%20CGR%20Fabrication">
+            Send an Enquiry
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="logo-placeholder">
+            <span class="logo-mark">LOGO</span>
+
+            <span class="logo-text">
+              CGR FABRICATION
+              <small>Logo placeholder</small>
+            </span>
+          </div>
+
+          <p style="margin-top:1rem;">
+            Scaffolding, rental and fabrication solutions for projects
+            across Puducherry and beyond.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+
+          <div class="footer-links">
+            <a href="#about">About CGR</a>
+            <a href="#products">Product Categories</a>
+            <a href="#services">Services</a>
+            <a href="#process">How It Works</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+
+            <p>
+              Shop No. 3, 4 & 5 JM Complex,<br>
+              45 Feet Road Extension,<br>
+              Opp. to SBI, New Saram,<br>
+              Puducherry – 605013.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> CGR Fabrication. All rights reserved.</span>
+        <span>Website by Upscale Digital Media</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector("[data-theme-toggle]");
+
+    toggle.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+
+      root.dataset.theme = nextTheme;
+      toggle.textContent = nextTheme === "dark" ? "◐" : "☼";
+    });
+
+    const menu = document.querySelector(".menu");
+    const header = document.querySelector("#header");
+
+    menu.addEventListener("click", () => {
+      const open = header.classList.toggle("menu-open");
+
+      menu.setAttribute("aria-expanded", open);
+      menu.textContent = open ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        header.classList.remove("menu-open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.textContent = "☰";
+      });
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
