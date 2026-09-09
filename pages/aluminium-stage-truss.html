@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta
+    name="description"
+    content="CGR Fabrication provides aluminium stage truss solutions for events, stages, lighting, exhibitions and custom structural requirements in Puducherry."
+  >
+
+  <title>Aluminium Stage Truss | CGR Fabrication</title>
+
+  //api.fontshare.com">
+
+  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --xs: clamp(.75rem, .7rem + .25vw, .875rem);
+      --sm: clamp(.875rem, .8rem + .35vw, 1rem);
+      --base: clamp(1rem, .95rem + .25vw, 1.125rem);
+      --lg: clamp(1.125rem, 1rem + .75vw, 1.5rem);
+      --xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --xxl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --display: clamp(2.8rem, 1rem + 5vw, 5.8rem);
+
+      --s1: .25rem;
+      --s2: .5rem;
+      --s3: .75rem;
+      --s4: 1rem;
+      --s5: 1.25rem;
+      --s6: 1.5rem;
+      --s8: 2rem;
+      --s10: 2.5rem;
+      --s12: 3rem;
+      --s16: 4rem;
+      --s20: 5rem;
+      --s24: 6rem;
+      --s32: 8rem;
+
+      --r: .5rem;
+      --body: "Satoshi", Arial, sans-serif;
+      --display-font: "Boska", Georgia, serif;
+      --max: 1200px;
+      --ease: 180ms cubic-bezier(.16, 1, .3, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #111417;
+      --surface: #171b1e;
+      --surface2: #1d2327;
+      --text: #f0f2ed;
+      --muted: #aeb7b9;
+      --faint: #778286;
+      --line: rgba(240, 242, 237, .13);
+      --gold: #f6aa1c;
+      --gold2: #ffc454;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface2: #f0eee8;
+      --text: #172126;
+      --muted: #5d696d;
+      --faint: #7e888a;
+      --line: rgba(23, 33, 38, .13);
+      --gold: #b86f00;
+      --gold2: #8c5300;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--text);
+      font: var(--base)/1.6 var(--body);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      font-size: var(--xs);
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .top {
+      font-size: var(--xs);
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .top .wrap {
+      min-height: 2.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--s4);
+    }
+
+    .top-links {
+      display: flex;
+      gap: var(--s5);
+      flex-wrap: wrap;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s6);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .mark {
+      width: 2.35rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px dashed var(--gold);
+      color: var(--gold);
+      font-size: var(--xs);
+    }
+
+    .brand small {
+      display: block;
+      font-size: var(--xs);
+      letter-spacing: .1em;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      gap: var(--s6);
+      align-items: center;
+      font-size: var(--sm);
+    }
+
+    .links a:hover,
+    .links a.active {
+      color: var(--gold);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+    }
+
+    .theme,
+    .hamburger {
+      width: 2.75rem;
+      height: 2.75rem;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .btn {
+      min-height: 2.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s2);
+      padding: 0 var(--s5);
+      font-size: var(--sm);
+      font-weight: 700;
+      border-radius: var(--r);
+      transition: transform var(--ease), background var(--ease);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: var(--gold);
+      color: #1b1407;
+    }
+
+    .primary:hover {
+      background: var(--gold2);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      background: transparent;
+    }
+
+    .secondary:hover {
+      background: var(--surface2);
+    }
+
+    .hero {
+      min-height: clamp(35rem, 76vh, 48rem);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--bg) 0%,
+          color-mix(in srgb, var(--bg) 75%, transparent) 55%,
+          color-mix(in srgb, var(--bg) 18%, transparent)
+        ),
+        linear-gradient(0deg, var(--bg) 0%, transparent 55%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/01f4de47-4395-5e5e-9262-2a943b6717ca/a92ea09e-dc28-5bef-a960-d150baf0dc20.jpg")
+        center/cover;
+    }
+
+    .hero .wrap {
+      position: relative;
+      padding-block: var(--s20);
+    }
+
+    .hero h1 {
+      max-width: 11ch;
+      margin-top: var(--s4);
+      font: 500 var(--display)/.93 var(--display-font);
+      letter-spacing: -.035em;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 58ch;
+      margin-top: var(--s6);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--s4);
+      flex-wrap: wrap;
+      margin-top: var(--s8);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s8);
+      margin-top: var(--s12);
+      color: var(--muted);
+      font-size: var(--sm);
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--text);
+      font-size: var(--base);
+    }
+
+    .section {
+      padding-block: clamp(var(--s16), 8vw, var(--s32));
+    }
+
+    .head {
+      display: grid;
+      gap: var(--s4);
+      max-width: 760px;
+      margin-bottom: var(--s10);
+    }
+
+    h2 {
+      font: 500 var(--xxl)/1.08 var(--display-font);
+    }
+
+    .copy {
+      max-width: 62ch;
+      color: var(--muted);
+    }
+
+    .applications {
+      background: var(--surface);
+    }
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+    }
+
+    .application {
+      min-height: 14rem;
+      padding: var(--s6);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background var(--ease);
+    }
+
+    .application:last-child {
+      border-right: 0;
+    }
+
+    .application:hover {
+      background: var(--surface2);
+    }
+
+    .application .number {
+      color: var(--gold);
+      font-size: var(--sm);
+      font-weight: 700;
+    }
+
+    .application h3 {
+      font-size: var(--lg);
+      line-height: 1.15;
+    }
+
+    .application p {
+      color: var(--muted);
+      font-size: var(--sm);
+      margin-top: var(--s2);
+    }
+
+    .project-flow {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: var(--s12);
+      align-items: start;
+    }
+
+    .truss-image {
+      min-height: 32rem;
+      position: sticky;
+      top: 7rem;
+
+      background:
+        linear-gradient(
+          0deg,
+          color-mix(in srgb, var(--bg) 62%, transparent),
+          transparent 60%
+        ),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ad2586d1-97bd-5335-981e-7391e92bbbf3/6c3efa4e-19ef-5eb4-8b85-2affe704f860.jpg")
+        center/cover;
+    }
+
+    .flow-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .flow-item {
+      display: flex;
+      gap: var(--s5);
+      padding: var(--s6) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flow-item span {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: var(--sm);
+    }
+
+    .flow-item h3 {
+      font-size: var(--lg);
+    }
+
+    .flow-item p {
+      color: var(--muted);
+      font-size: var(--sm);
+      margin-top: var(--s2);
+    }
+
+    .specs {
+      background: var(--gold);
+      color: #1b1407;
+    }
+
+    .specs .eyebrow {
+      color: #654000;
+    }
+
+    .specs .copy {
+      color: #4d3b15;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s8);
+      margin-top: var(--s10);
+    }
+
+    .spec {
+      border-top: 1px solid rgba(27, 20, 7, .25);
+      padding-top: var(--s4);
+    }
+
+    .spec h3 {
+      font-size: var(--lg);
+    }
+
+    .spec p {
+      margin-top: var(--s2);
+      font-size: var(--sm);
+      color: #4d3b15;
+    }
+
+    .notice {
+      margin-top: var(--s8);
+      padding: var(--s4);
+      border: 1px solid rgba(27, 20, 7, .22);
+      background: rgba(255, 255, 255, .16);
+      max-width: 760px;
+      font-size: var(--sm);
+      color: #4d3b15;
+    }
+
+    .quote {
+      padding-block: var(--s20);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .quote-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s12);
+      align-items: end;
+    }
+
+    .quote h2 {
+      font: 500 var(--xxl)/1.08 var(--display-font);
+    }
+
+    .quote p {
+      margin-top: var(--s4);
+      color: var(--muted);
+    }
+
+    .quote-actions {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: var(--s4);
+    }
+
+    .footer {
+      padding-block: var(--s12);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1fr;
+      gap: var(--s10);
+    }
+
+    .footer h3 {
+      margin-bottom: var(--s4);
+      color: var(--gold);
+      font-size: var(--sm);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .footer p,
+    .footer a {
+      color: var(--muted);
+      font-size: var(--sm);
+    }
+
+    .footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: grid;
+      gap: var(--s2);
+    }
+
+    .footer-bottom {
+      margin-top: var(--s10);
+      padding-top: var(--s4);
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: var(--xs);
+    }
+
+    @media (max-width: 860px) {
+      .links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .header.menu-open .links {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--s6);
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .application-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .application:nth-child(2) {
+        border-right: 0;
+      }
+
+      .application:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .truss-image {
+        position: relative;
+        top: auto;
+        min-height: 20rem;
+      }
+
+      .spec-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quote-inner,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .top .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: var(--s2);
+      }
+
+      .actions .btn {
+        display: none;
+      }
+
+      .hero {
+        min-height: 42rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 13vw, 4.4rem);
+      }
+
+      .application-grid,
+      .spec-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .application {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .application:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <div class="wrap">
+      <span>Aluminium • Fabrication • Project Solutions</span>
+
+      <div class="top-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <nav class="wrap nav">
+
+      <a class="brand" href="../index.html">
+        <span class="mark">LOGO</span>
+
+        <span>
+          CGR FABRICATION
+          <small>Logo placeholder</small>
+        </span>
+      </a>
+
+      <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="fabrication.html">Fabrication</a>
+        <a class="active" href="aluminium-stage-truss.html">Stage Truss</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="actions">
+        <button class="theme" type="button" data-theme aria-label="Switch theme">
+          ◐
+        </button>
+
+        <a class="btn primary" href="contact.html">Request a Quote</a>
+
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+
+        <span class="eyebrow">Aluminium stage truss</span>
+
+        <h1>
+          Build the stage.
+          Support the <em>moment.</em>
+        </h1>
+
+        <p>
+          CGR provides aluminium stage truss solutions for events, lighting,
+          exhibitions, stage structures, tents and custom project requirements.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="contact.html">Request a Quote →</a>
+          <a class="btn secondary" href="#applications">Explore Applications</a>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <strong>Stage Structures</strong>
+            <span>Custom event setups</span>
+          </div>
+
+          <div>
+            <strong>Lighting Truss</strong>
+            <span>Support for lighting layouts</span>
+          </div>
+
+          <div>
+            <strong>Event Solutions</strong>
+            <span>Requirement-led fabrication</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section applications" id="applications">
+      <div class="wrap">
+
+        <div class="head">
+          <span class="eyebrow">Applications</span>
+
+          <h2>Designed for staging, lighting and event environments.</h2>
+
+          <p class="copy">
+            Aluminium truss can be planned around the event layout,
+            structural requirement, venue condition, lighting arrangement
+            and required installation timeline.
+          </p>
+        </div>
+
+        <div class="application-grid">
+
+          <article class="application">
+            <span class="number">01</span>
+
+            <div>
+              <h3>Outdoor Event Stages</h3>
+              <p>Truss structures for organised outdoor event and performance setups.</p>
+            </div>
+          </article>
+
+          <article class="application">
+            <span class="number">02</span>
+
+            <div>
+              <h3>Lighting & Sound Support</h3>
+              <p>Practical truss arrangements for lighting, sound and event equipment.</p>
+            </div>
+          </article>
+
+          <article class="application">
+            <span class="number">03</span>
+
+            <div>
+              <h3>Exhibition Structures</h3>
+              <p>Custom display, booth and temporary framework requirements.</p>
+            </div>
+          </article>
+
+          <article class="application">
+            <span class="number">04</span>
+
+            <div>
+              <h3>Stage Roof & Canopy</h3>
+              <p>Project-specific support structures for covered stage arrangements.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap project-flow">
+
+        <div
+          class="truss-image"
+          role="img"
+          aria-label="Aluminium truss stage setup with lighting"
+        ></div>
+
+        <div>
+          <div class="head">
+            <span class="eyebrow">Project planning</span>
+
+            <h2>Every stage begins with the right structure.</h2>
+
+            <p class="copy">
+              Share the stage size, venue, layout, expected equipment,
+              location and event date so the truss requirement can be
+              planned accurately.
+            </p>
+          </div>
+
+          <div class="flow-list">
+
+            <article class="flow-item">
+              <span>01</span>
+
+              <div>
+                <h3>Share the event brief</h3>
+
+                <p>
+                  Provide event type, stage dimensions, venue details,
+                  design reference and intended usage.
+                </p>
+              </div>
+            </article>
+
+            <article class="flow-item">
+              <span>02</span>
+
+              <div>
+                <h3>Discuss truss configuration</h3>
+
+                <p>
+                  Review the practical structure, components,
+                  delivery requirements and project timeline.
+                </p>
+              </div>
+            </article>
+
+            <article class="flow-item">
+              <span>03</span>
+
+              <div>
+                <h3>Receive project quotation</h3>
+
+                <p>
+                  Receive a quotation based on the approved requirement,
+                  final dimensions and service scope.
+                </p>
+              </div>
+            </article>
+
+            <article class="flow-item">
+              <span>04</span>
+
+              <div>
+                <h3>Confirm delivery or setup</h3>
+
+                <p>
+                  Confirm fabrication, supply, delivery, installation
+                  or other final project requirements.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section specs">
+      <div class="wrap">
+
+        <div class="head">
+          <span class="eyebrow">Requirement checklist</span>
+
+          <h2>What to share for an accurate quotation.</h2>
+
+          <p class="copy">
+            Providing complete information at the beginning helps
+            CGR recommend the right structure and prepare an accurate quotation.
+          </p>
+        </div>
+
+        <div class="spec-grid">
+
+          <article class="spec">
+            <h3>Dimensions</h3>
+            <p>Stage width, depth, height, roof requirement and any known truss layout.</p>
+          </article>
+
+          <article class="spec">
+            <h3>Event use</h3>
+            <p>Concert, wedding, exhibition, corporate event, lighting setup or other intended use.</p>
+          </article>
+
+          <article class="spec">
+            <h3>Location & timeline</h3>
+            <p>Venue location, event date, required delivery date and expected setup timeline.</p>
+          </article>
+
+        </div>
+
+        <div class="notice">
+          Final truss design, material selection, dimensions, load consideration,
+          installation and safety requirements must be confirmed for each individual
+          project before order approval.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="wrap quote-inner">
+
+        <div>
+          <span class="eyebrow">Start your event requirement</span>
+
+          <h2>Need an aluminium stage truss solution?</h2>
+
+          <p>
+            Share the event plan, stage dimensions or reference image
+            and request a project-specific quotation.
+          </p>
+        </div>
+
+        <div class="quote-actions">
+          <a class="btn secondary" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+
+          <a
+            class="btn primary"
+            href="mailto:sn@cgrfc.com?subject=Aluminium%20Stage%20Truss%20Enquiry"
+          >
+            Send Truss Enquiry
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+
+      <div class="footer-grid">
+
+        <div>
+          <a class="brand" href="../index.html">
+            <span class="mark">LOGO</span>
+
+            <span>
+              CGR FABRICATION
+              <small>Logo placeholder</small>
+            </span>
+          </a>
+
+          <p style="margin-top:1rem;">
+            Aluminium windows, stage truss, scaffolding and fabrication
+            solutions for projects across Puducherry and beyond.
+          </p>
+        </div>
+                <div>
+          <h3>Products</h3>
+
+          <div class="footer-links">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss</a>
+            <a href="aluminium-scaffolding.html">Aluminium Scaffolding</a>
+            <a href="aluminium-windows.html">Aluminium Windows</a>
+            <a href="scaffolding-rental.html">Scaffolding Rental</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+
+            <p>
+              Shop No. 3, 4 & 5 JM Complex,<br>
+              45 Feet Road Extension,<br>
+              Opp. to SBI, New Saram,<br>
+              Puducherry – 605013.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> CGR Fabrication. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeButton = document.querySelector("[data-theme]");
+
+    themeButton.addEventListener("click", () => {
+      const nextTheme =
+        root.dataset.theme === "dark" ? "light" : "dark";
+
+      root.dataset.theme = nextTheme;
+      themeButton.textContent =
+        nextTheme === "dark" ? "◐" : "☼";
+    });
+
+    const header = document.querySelector("#header");
+    const menuButton = document.querySelector(".hamburger");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("menu-open");
+
+      menuButton.textContent = isOpen ? "×" : "☰";
+      menuButton.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.querySelectorAll(".links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        header.classList.remove("menu-open");
+        menuButton.textContent = "☰";
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
