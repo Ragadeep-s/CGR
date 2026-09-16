@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CGR Fabrication provides architectural fabrication solutions for residential, commercial and project-specific built environments in Puducherry.">
+  <title>Architectural Fabrication | CGR Fabrication</title>
+
+  //api.fontshare.com">
+  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  /css/style.css">
+
+  <style>
+    .arch-hero {
+      --hero-image: url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/aff303e0-e211-53bc-aae2-41f1c49ec3da/24a148c2-4c85-5916-b3a9-5c134d965037.jpg");
+    }
+
+    .arch-intro {
+      background: var(--surface);
+    }
+
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .arch-copy h2 {
+      margin-top: var(--space-4);
+    }
+
+    .arch-copy p {
+      margin-top: var(--space-5);
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .arch-visual {
+      min-height: 31rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 58%, transparent), transparent 60%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/450026ae-5381-535b-bfd8-8fd6611af6fe/1715acf5-b74f-5245-aaf8-1dc29c658c0d.jpg")
+        center / cover;
+    }
+
+    .arch-list {
+      display: grid;
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+
+    .arch-list div {
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .arch-list span {
+      color: var(--gold);
+      margin-right: var(--space-2);
+      font-weight: 700;
+    }
+
+    .arch-projects {
+      background: var(--bg);
+    }
+
+    .arch-card {
+      min-height: 18rem;
+      padding: var(--space-6);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .arch-card:hover {
+      transform: translateY(-0.4rem);
+      background: var(--surface-2);
+    }
+
+    .arch-card span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .arch-card h3 {
+      font-size: var(--text-lg);
+      line-height: 1.15;
+    }
+
+    .arch-card p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .design-process {
+      background: var(--gold);
+      color: #1b1407;
+    }
+
+    .design-process .eyebrow {
+      color: #674300;
+    }
+
+    .design-process .section-copy {
+      color: #553f17;
+    }
+
+    .design-process .process-step {
+      border-color: rgba(27, 20, 7, 0.25);
+    }
+
+    .design-process .process-step span {
+      color: #674300;
+    }
+
+    .design-process .process-step p {
+      color: #553f17;
+    }
+
+    @media (max-width: 900px) {
+      .arch-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .arch-visual {
+        min-height: 22rem;
+      }
+    }
+  </style>
+
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Aluminium • Fabrication • Project Solutions</span>
+      <div class="topbar-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="../index.html">
+        <span class="logo-placeholder">LOGO</span>
+        <span>CGR FABRICATION<small>Logo placeholder</small></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+            Products <span class="dropdown-arrow">⌄</span>
+          </button>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss <span>↗</span></a>
+            <a href="aluminium-scaffolding.html">Aluminium Scaffolding <span>↗</span></a>
+            <a href="aluminium-windows.html">Aluminium Windows <span>↗</span></a>
+            <a href="heavy-fabrication.html">Heavy Fabrication <span>↗</span></a>
+            <a class="active" href="architectural-fabrication.html">Architectural Fabrication <span>↗</span></a>
+            <a href="pre-engineered-buildings.html">Pre-Engineered Buildings <span>↗</span></a>
+            <a href="scaffolding-rental.html">Scaffolding Rental <span>↗</span></a>
+          </div>
+        </div>
+
+        <a class="active" href="fabrication.html">Fabrication</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero arch-hero">
+      <div class="wrap page-hero-content">
+        <span class="eyebrow reveal">Architectural Fabrication</span>
+
+        <h1 class="reveal reveal-delay-1">
+          Fabrication that fits
+          the <em>built environment.</em>
+        </h1>
+
+        <p class="reveal reveal-delay-2">
+          Requirement-led fabrication support for residential, commercial
+          and architectural projects where detail, dimensions and finish matter.
+        </p>
+
+        <div class="page-hero-actions reveal reveal-delay-3">
+          <a class="btn btn-primary" href="contact.html">Discuss Your Requirement →</a>
+          <a class="btn btn-secondary" href="#applications">Explore Applications</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section arch-intro">
+      <div class="wrap arch-grid">
+        <div class="arch-copy reveal">
+          <span class="eyebrow">Project-led fabrication</span>
+          <h2 class="section-title">Built around the drawing, the space and the finish.</h2>
+
+          <p>
+            Architectural fabrication requires clear discussion of measurements,
+            drawings, site conditions, design preference and approved material scope
+            before finalising the work.
+          </p>
+
+          <div class="arch-list">
+            <div><span>01</span> Residential and commercial project requirements</div>
+            <div><span>02</span> Drawing, image and measurement-led discussion</div>
+            <div><span>03</span> Requirement-specific fabrication planning</div>
+            <div><span>04</span> Final finish and installation scope confirmed before work begins</div>
+          </div>
+        </div>
+
+        <div class="arch-visual reveal reveal-delay-1" role="img" aria-label="Architectural aluminium fabrication"></div>
+      </div>
+    </section>
+
+    <section class="section arch-projects" id="applications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Applications</span>
+          <h2 class="section-title">For projects where structure meets appearance.</h2>
+          <p class="section-copy">
+            Exact deliverables should be confirmed with CGR based on the project drawings,
+            required finish and execution scope.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="arch-card reveal">
+            <span>01</span>
+            <div>
+              <h3>Residential Projects</h3>
+              <p>Fabrication requirements for homes, villas, apartment work and custom spaces.</p>
+            </div>
+          </article>
+
+          <article class="arch-card reveal reveal-delay-1">
+            <span>02</span>
+            <div>
+              <h3>Commercial Spaces</h3>
+              <p>Requirement-led fabrication for offices, shops and commercial built environments.</p>
+            </div>
+          </article>
+
+          <article class="arch-card reveal reveal-delay-2">
+            <span>03</span>
+            <div>
+              <h3>Custom Architectural Work</h3>
+              <p>Custom dimensions and configurations for project-specific architectural needs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section design-process">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Design-to-delivery process</span>
+          <h2 class="section-title">Start with the brief. Finish with the right fit.</h2>
+          <p class="section-copy">
+            Final terms depend on the approved drawing, material scope, finish and site requirement.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <span>01</span>
+            <h3>Share drawings</h3>
+            <p>Send measurements, sketches, reference images and intended application.</p>
+          </article>
+
+          <article class="process-step reveal reveal-delay-1">
+            <span>02</span>
+            <h3>Review the requirement</h3>
+            <p>Discuss scope, practical approach, materials and project timeline.</p>
+          </article>
+
+          <article class="process-step reveal reveal-delay-2">
+            <span>03</span>
+            <h3>Approve the quotation</h3>
+            <p>Confirm the agreed fabrication scope, commercial terms and delivery plan.</p>
+          </article>
+
+          <article class="process-step reveal reveal-delay-3">
+            <span>04</span>
+            <h3>Fabrication & fitting</h3>
+            <p>Coordinate approved fabrication, delivery and installation requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="wrap cta-layout">
+        <div class="reveal">
+          <span class="eyebrow">Start your architectural enquiry</span>
+          <h2 class="section-title">Have a drawing or project reference?</h2>
+          <p class="section-copy">Share the project details for a practical discussion and quotation.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="tel:+919790222381">Call +91 97902 22381</a>
+          <a class="btn" style="background:#1b1407;color:#fff;" href="mailto:sn@cgrfc.com?subject=Architectural%20Fabrication%20Enquiry">Send Architectural Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <span class="logo-placeholder">LOGO</span>
+            <span>CGR FABRICATION<small>Logo placeholder</small></span>
+          </a>
+          <p style="margin-top:1rem;">Aluminium windows, stage truss, scaffolding and fabrication solutions for projects across Puducherry and beyond.</p>
+        </div>
+
+        <div>
+          <h3>Fabrication</h3>
+          <div class="footer-links">
+            <a href="fabrication.html">Fabrication Overview</a>
+            <a href="heavy-fabrication.html">Heavy Fabrication</a>
+            <a href="pre-engineered-buildings.html">Pre-Engineered Buildings</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+            <p>Shop No. 3, 4 & 5 JM Complex,<br>45 Feet Road Extension,<br>Opp. to SBI, New Saram,<br>Puducherry – 605013.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© <span data-year></span> CGR Fabrication. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
