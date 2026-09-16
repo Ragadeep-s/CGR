@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CGR Fabrication provides aluminium scaffolding and mobile access solutions for construction, maintenance and industrial work in Puducherry.">
+  <title>Aluminium Scaffolding | CGR Fabrication</title>
+
+  //api.fontshare.com">
+  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  /css/style.css">
+
+  <style>
+    .scaffold-hero {
+      --hero-image: url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/18267b98-cf8c-5b45-937e-62e05b8ed3c6/727422e6-8467-5cf5-b2bc-ad39cc443ebf.jpg");
+    }
+
+    .equipment-section {
+      background: var(--surface);
+    }
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--space-4);
+    }
+
+    .equipment-card {
+      min-height: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--space-6);
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .equipment-card:hover {
+      transform: translateY(-0.4rem);
+      background: var(--bg);
+    }
+
+    .equipment-card span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .equipment-card h3 {
+      font-size: var(--text-lg);
+    }
+
+    .equipment-card p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .safety-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-10);
+      align-items: stretch;
+    }
+
+    .safety-image {
+      min-height: 30rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 60%, transparent), transparent 60%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/5ea2c04e-7429-5a29-aa81-a931d8be47bc/949b23ec-f599-5fdc-a86a-e7b7681036c8.jpg")
+        center / cover;
+    }
+
+    .safety-copy {
+      padding: clamp(var(--space-8), 5vw, var(--space-16));
+      background: var(--gold);
+      color: #1b1407;
+    }
+
+    .safety-copy .eyebrow {
+      color: #674300;
+    }
+
+    .safety-copy p {
+      margin-top: var(--space-4);
+      color: #553f17;
+    }
+
+    .safety-list {
+      display: grid;
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+
+    .safety-list div {
+      border-top: 1px solid rgba(27, 20, 7, 0.25);
+      padding-top: var(--space-3);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .requirement-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .requirement-table th,
+    .requirement-table td {
+      padding: var(--space-5);
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .requirement-table th {
+      color: var(--gold);
+      font-size: var(--text-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .requirement-table td {
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .requirement-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .equipment-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .safety-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .safety-image {
+        min-height: 21rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .equipment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .requirement-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Aluminium • Fabrication • Project Solutions</span>
+      <div class="topbar-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="../index.html">
+        <span class="logo-placeholder">LOGO</span>
+        <span>CGR FABRICATION<small>Logo placeholder</small></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+            Products <span class="dropdown-arrow">⌄</span>
+          </button>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss <span>↗</span></a>
+            <a class="active" href="aluminium-scaffolding.html">Aluminium Scaffolding <span>↗</span></a>
+            <a href="aluminium-windows.html">Aluminium Windows <span>↗</span></a>
+            <a href="heavy-fabrication.html">Heavy Fabrication <span>↗</span></a>
+            <a href="architectural-fabrication.html">Architectural Fabrication <span>↗</span></a>
+            <a href="pre-engineered-buildings.html">Pre-Engineered Buildings <span>↗</span></a>
+            <a href="scaffolding-rental.html">Scaffolding Rental <span>↗</span></a>
+          </div>
+        </div>
+
+        <a href="fabrication.html">Fabrication</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero scaffold-hero">
+      <div class="wrap page-hero-content">
+        <span class="eyebrow reveal">Aluminium Scaffolding</span>
+
+        <h1 class="reveal reveal-delay-1">
+          Lightweight access.
+          Built for <em>serious work.</em>
+        </h1>
+
+        <p class="reveal reveal-delay-2">
+          Aluminium scaffolding solutions for construction, maintenance,
+          inspection, interior work and site-specific access requirements.
+        </p>
+
+        <div class="page-hero-actions reveal reveal-delay-3">
+          <a class="btn btn-primary" href="contact.html">Request a Quote →</a>
+          <a class="btn btn-secondary" href="#solutions">Explore Solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section equipment-section" id="solutions">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Access solutions</span>
+          <h2 class="section-title">Built around the job, the height and the site.</h2>
+          <p class="section-copy">
+            Final selection should be based on working height, available space,
+            surface conditions, duration of work and approved safety requirements.
+          </p>
+        </div>
+
+        <div class="equipment-grid">
+          <article class="equipment-card reveal">
+            <span>01</span>
+            <div>
+              <h3>Mobile Scaffold Towers</h3>
+              <p>Moveable tower systems for maintenance, installation and indoor or outdoor project work.</p>
+            </div>
+          </article>
+
+          <article class="equipment-card reveal reveal-delay-1">
+            <span>02</span>
+            <div>
+              <h3>Maintenance Access</h3>
+              <p>Practical access solutions for repair, inspection, painting and facility maintenance work.</p>
+            </div>
+          </article>
+
+          <article class="equipment-card reveal reveal-delay-2">
+            <span>03</span>
+            <div>
+              <h3>Construction Access</h3>
+              <p>Lightweight aluminium systems for structured access during active site requirements.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap safety-layout">
+        <div class="safety-image reveal" role="img" aria-label="Aluminium scaffolding tower components"></div>
+
+        <div class="safety-copy reveal reveal-delay-1">
+          <span class="eyebrow">Project-first planning</span>
+          <h2 class="section-title">The right access setup starts with clear information.</h2>
+
+          <p>
+            Share the location, required working height, type of work,
+            expected duration and site conditions before selecting a system.
+          </p>
+
+          <div class="safety-list">
+            <div>Working height and access requirement</div>
+            <div>Indoor, outdoor or industrial location</div>
+            <div>Required platform space and movement needs</div>
+            <div>Rental duration or purchase requirement</div>
+            <div>Site safety and project-specific conditions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Quotation checklist</span>
+          <h2 class="section-title">Share these details with your enquiry.</h2>
+          <p class="section-copy">
+            The more complete the requirement, the more accurately CGR can recommend
+            the appropriate aluminium scaffolding solution.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <table class="requirement-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Why it matters</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Required working height</td>
+                <td>Helps identify the appropriate platform and access configuration.</td>
+              </tr>
+
+              <tr>
+                <td>Type of work</td>
+                <td>Maintenance, painting, installation, inspection or construction may need different setups.</td>
+              </tr>
+
+              <tr>
+                <td>Site condition</td>
+                <td>Indoor/outdoor location, floor surface, space restrictions and movement requirements affect planning.</td>
+              </tr>
+
+              <tr>
+                <td>Purchase or rental</td>
+                <td>Helps confirm whether the requirement is long-term ownership or project-duration access support.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="wrap cta-layout">
+        <div class="reveal">
+          <span class="eyebrow">Discuss your access requirement</span>
+          <h2 class="section-title">Need aluminium scaffolding for your project?</h2>
+          <p class="section-copy">
+            Send your working-height requirement, project details and preferred timeline.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-2" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="tel:+919790222381">Call +91 97902 22381</a>
+          <a class="btn" style="background:#1b1407;color:#fff;" href="mailto:sn@cgrfc.com?subject=Aluminium%20Scaffolding%20Enquiry">Send Scaffolding Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <span class="logo-placeholder">LOGO</span>
+            <span>CGR FABRICATION<small>Logo placeholder</small></span>
+          </a>
+          <p style="margin-top:1rem;">Aluminium windows, stage truss, scaffolding and fabrication solutions for projects across Puducherry and beyond.</p>
+        </div>
+
+        <div>
+          <h3>Products</h3>
+          <div class="footer-links">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss</a>
+            <a href="aluminium-windows.html">Aluminium Windows</a>
+            <a href="scaffolding-rental.html">Scaffolding Rental</a>
+            <a href="fabrication.html">Fabrication Services</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+            <p>Shop No. 3, 4 & 5 JM Complex,<br>45 Feet Road Extension,<br>Opp. to SBI, New Saram,<br>Puducherry – 605013.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© <span data-year></span> CGR Fabrication. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
