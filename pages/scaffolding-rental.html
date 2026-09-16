@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CGR Fabrication provides scaffolding rental support for construction, maintenance, renovation and project-duration access needs in Puducherry.">
+  <title>Scaffolding Rental | CGR Fabrication</title>
+
+  //api.fontshare.com">
+  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  /css/style.css">
+
+  <style>
+    .rental-hero {
+      --hero-image: url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/baaf9c18-f56e-5d78-b74c-98d95f995016/6c3efa4e-19ef-5eb4-8b85-2affe704f860.jpg");
+    }
+
+    .rental-section {
+      background: var(--surface);
+    }
+
+    .rental-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    .rental-card {
+      min-height: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--space-6);
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .rental-card:hover {
+      transform: translateY(-0.4rem);
+      background: var(--bg);
+    }
+
+    .rental-card span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .rental-card h3 {
+      font-size: var(--text-lg);
+      line-height: 1.15;
+    }
+
+    .rental-card p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .rental-flow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .rental-image {
+      min-height: 30rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 63%, transparent), transparent 60%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/5ea2c04e-7429-5a29-aa81-a931d8be47bc/949b23ec-f599-5fdc-a86a-e7b7681036c8.jpg")
+        center / cover;
+    }
+
+    .rental-steps {
+      border-top: 1px solid var(--line);
+    }
+
+    .rental-step {
+      padding: var(--space-6) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rental-step span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .rental-step h3 {
+      margin-top: var(--space-2);
+      font-size: var(--text-lg);
+    }
+
+    .rental-step p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .rental-note {
+      background: var(--gold);
+      color: #1b1407;
+    }
+
+    .rental-note .eyebrow {
+      color: #674300;
+    }
+
+    .rental-note .section-copy {
+      color: #553f17;
+    }
+
+    .rental-note .info-card {
+      border-color: rgba(27, 20, 7, 0.25);
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .rental-note .info-card:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .rental-note .info-card p {
+      color: #553f17;
+    }
+
+    @media (max-width: 900px) {
+      .rental-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .rental-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .rental-image {
+        min-height: 21rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .rental-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Aluminium • Fabrication • Project Solutions</span>
+      <div class="topbar-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="../index.html">
+        <span class="logo-placeholder">LOGO</span>
+        <span>CGR FABRICATION<small>Logo placeholder</small></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+            Products <span class="dropdown-arrow">⌄</span>
+          </button>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss <span>↗</span></a>
+            <a href="aluminium-scaffolding.html">Aluminium Scaffolding <span>↗</span></a>
+            <a href="aluminium-windows.html">Aluminium Windows <span>↗</span></a>
+            <a href="heavy-fabrication.html">Heavy Fabrication <span>↗</span></a>
+            <a href="architectural-fabrication.html">Architectural Fabrication <span>↗</span></a>
+            <a href="pre-engineered-buildings.html">Pre-Engineered Buildings <span>↗</span></a>
+            <a class="active" href="scaffolding-rental.html">Scaffolding Rental <span>↗</span></a>
+          </div>
+        </div>
+
+        <a href="fabrication.html">Fabrication</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero rental-hero">
+      <div class="wrap page-hero-content">
+        <span class="eyebrow reveal">Scaffolding Rental</span>
+
+        <h1 class="reveal reveal-delay-1">
+          Access when you need it.
+          Support for the <em>job ahead.</em>
+        </h1>
+
+        <p class="reveal reveal-delay-2">
+          Flexible scaffolding rental support for construction, maintenance,
+          renovation, installation and project-duration access requirements.
+        </p>
+
+        <div class="page-hero-actions reveal reveal-delay-3">
+          <a class="btn btn-primary" href="contact.html">Request Rental Quote →</a>
+          <a class="btn btn-secondary" href="#rental-solutions">Explore Rental Support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rental-section" id="rental-solutions">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Rental support</span>
+          <h2 class="section-title">Flexible access support for project-duration work.</h2>
+          <p class="section-copy">
+            Rental availability, duration, material type, quantity and delivery terms
+            should be confirmed based on the actual project requirement.
+          </p>
+        </div>
+
+        <div class="rental-grid">
+          <article class="rental-card reveal">
+            <span>01</span>
+            <div>
+              <h3>Construction Projects</h3>
+              <p>Access equipment support for ongoing construction and site work requirements.</p>
+            </div>
+          </article>
+
+          <article class="rental-card reveal reveal-delay-1">
+            <span>02</span>
+            <div>
+              <h3>Maintenance & Repair</h3>
+              <p>Temporary access support for maintenance, repairs, painting and installation work.</p>
+            </div>
+          </article>
+
+          <article class="rental-card reveal reveal-delay-2">
+            <span>03</span>
+            <div>
+              <h3>Short-Term Requirements</h3>
+              <p>Requirement-based rental planning for immediate or fixed-duration site needs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap rental-flow">
+        <div class="rental-image reveal" role="img" aria-label="Scaffolding access equipment"></div>
+
+        <div>
+          <div class="section-head reveal">
+            <span class="eyebrow">Rental process</span>
+            <h2 class="section-title">Simple rental planning for active projects.</h2>
+            <p class="section-copy">
+              Send the project details early so availability and the right material requirement can be checked.
+            </p>
+          </div>
+
+          <div class="rental-steps">
+            <article class="rental-step reveal">
+              <span>01</span>
+              <h3>Share the requirement</h3>
+              <p>Provide working height, quantity, site location, type of work and rental duration.</p>
+            </article>
+
+            <article class="rental-step reveal reveal-delay-1">
+              <span>02</span>
+              <h3>Check availability</h3>
+              <p>CGR reviews availability and discusses the practical rental arrangement.</p>
+            </article>
+
+            <article class="rental-step reveal reveal-delay-2">
+              <span>03</span>
+              <h3>Receive rental quotation</h3>
+              <p>Receive a project-specific quotation including approved commercial and delivery terms.</p>
+            </article>
+
+            <article class="rental-step reveal reveal-delay-3">
+              <span>04</span>
+              <h3>Confirm dispatch</h3>
+              <p>Finalise the rental period, delivery timing and agreed project support scope.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rental-note">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Information required</span>
+          <h2 class="section-title">What to include in your rental enquiry.</h2>
+          <p class="section-copy">
+            Clear information helps avoid delays and supports an accurate rental quotation.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card reveal">
+            <span class="card-number">01</span>
+            <div>
+              <h3>Working height</h3>
+              <p>Approximate height and type of access requirement for the work.</p>
+            </div>
+          </article>
+
+          <article class="info-card reveal reveal-delay-1">
+            <span class="card-number">02</span>
+            <div>
+              <h3>Rental period</h3>
+              <p>Expected start date, end date and any delivery requirement.</p>
+            </div>
+          </article>
+
+          <article class="info-card reveal reveal-delay-2">
+            <span class="card-number">03</span>
+            <div>
+              <h3>Site information</h3>
+              <p>Project location, site conditions, point of contact and access constraints.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="wrap cta-layout">
+        <div class="reveal">
+          <span class="eyebrow">Start your rental enquiry</span>
+          <h2 class="section-title">Need scaffolding for a temporary project?</h2>
+          <p class="section-copy">Share the height, duration, quantity and location for a rental quotation.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="tel:+919790222381">Call +91 97902 22381</a>
+          <a class="btn" style="background:#1b1407;color:#fff;" href="mailto:sn@cgrfc.com?subject=Scaffolding%20Rental%20Enquiry">Send Rental Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <span class="logo-placeholder">LOGO</span>
+            <span>CGR FABRICATION<small>Logo placeholder</small></span>
+          </a>
+          <p style="margin-top:1rem;">Aluminium windows, stage truss, scaffolding and fabrication solutions for projects across Puducherry and beyond.</p>
+        </div>
+
+        <div>
+          <h3>Products</h3>
+          <div class="footer-links">
+            <a href="aluminium-scaffolding.html">Aluminium Scaffolding</a>
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss</a>
+            <a href="aluminium-windows.html">Aluminium Windows</a>
+            <a href="fabrication.html">Fabrication Services</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+            <p>Shop No. 3, 4 & 5 JM Complex,<br>45 Feet Road Extension,<br>Opp. to SBI, New Saram,<br>Puducherry – 605013.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© <span data-year></span> CGR Fabrication. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
