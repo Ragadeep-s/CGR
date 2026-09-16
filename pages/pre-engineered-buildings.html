@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CGR Fabrication provides project consultation and fabrication support for pre-engineered building requirements in Puducherry.">
+  <title>Pre-Engineered Buildings | CGR Fabrication</title>
+
+  //api.fontshare.com">
+  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  /css/style.css">
+
+  <style>
+    .peb-hero {
+      --hero-image: url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/6aa4fa8d-53a2-5b1c-821e-b3084966309b/ef4d7931-6629-5c9b-8333-55bbfa642653.jpg");
+    }
+
+    .peb-overview {
+      background: var(--surface);
+    }
+
+    .peb-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    .peb-image {
+      min-height: 33rem;
+      position: sticky;
+      top: 7rem;
+      background:
+        linear-gradient(0deg, color-mix(in srgb, var(--bg) 63%, transparent), transparent 60%),
+        url("https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8d057f6f-b0e4-5ad1-8bd5-843354489add/28debecd-03e6-51cc-9b7f-b40a1b5407ed.jpg")
+        center / cover;
+    }
+
+    .peb-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .peb-list article {
+      padding: var(--space-6) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .peb-list span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .peb-list h3 {
+      margin-top: var(--space-2);
+      font-size: var(--text-lg);
+    }
+
+    .peb-list p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .project-types {
+      background: var(--bg);
+    }
+
+    .project-card {
+      min-height: 17rem;
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-0.4rem);
+      background: var(--surface-2);
+    }
+
+    .project-card span {
+      color: var(--gold);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .project-card h3 {
+      font-size: var(--text-lg);
+      line-height: 1.15;
+    }
+
+    .project-card p {
+      margin-top: var(--space-2);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .important-note {
+      margin-top: var(--space-8);
+      padding: var(--space-5);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: var(--text-sm);
+    }
+
+    .important-note strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .peb-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .peb-image {
+        position: relative;
+        top: auto;
+        min-height: 22rem;
+      }
+    }
+  </style>
+
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Aluminium • Fabrication • Project Solutions</span>
+      <div class="topbar-links">
+        <a href="tel:+919790222381">+91 97902 22381</a>
+        <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="../index.html">
+        <span class="logo-placeholder">LOGO</span>
+        <span>CGR FABRICATION<small>Logo placeholder</small></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+            Products <span class="dropdown-arrow">⌄</span>
+          </button>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-stage-truss.html">Aluminium Stage Truss <span>↗</span></a>
+            <a href="aluminium-scaffolding.html">Aluminium Scaffolding <span>↗</span></a>
+            <a href="aluminium-windows.html">Aluminium Windows <span>↗</span></a>
+            <a href="heavy-fabrication.html">Heavy Fabrication <span>↗</span></a>
+            <a href="architectural-fabrication.html">Architectural Fabrication <span>↗</span></a>
+            <a class="active" href="pre-engineered-buildings.html">Pre-Engineered Buildings <span>↗</span></a>
+            <a href="scaffolding-rental.html">Scaffolding Rental <span>↗</span></a>
+          </div>
+        </div>
+
+        <a class="active" href="fabrication.html">Fabrication</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero peb-hero">
+      <div class="wrap page-hero-content">
+        <span class="eyebrow reveal">Pre-Engineered Buildings</span>
+
+        <h1 class="reveal reveal-delay-1">
+          Plan the structure.
+          Build the <em>possibility.</em>
+        </h1>
+
+        <p class="reveal reveal-delay-2">
+          Project consultation and fabrication support for pre-engineered
+          building requirements, industrial sheds, warehouses and custom building structures.
+        </p>
+
+        <div class="page-hero-actions reveal reveal-delay-3">
+          <a class="btn btn-primary" href="contact.html">Discuss Your Project →</a>
+          <a class="btn btn-secondary" href="#overview">Explore PEB Support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section peb-overview" id="overview">
+      <div class="wrap peb-layout">
+        <div class="peb-image reveal" role="img" aria-label="Pre-engineered building construction"></div>
+
+        <div>
+          <div class="section-head reveal">
+            <span class="eyebrow">Project-first approach</span>
+            <h2 class="section-title">Every building requirement starts with the right brief.</h2>
+            <p class="section-copy">
+              Project size, intended use, site location, drawings, structural requirements
+              and final scope should be confirmed before quotation.
+            </p>
+          </div>
+
+          <div class="peb-list">
+            <article class="reveal">
+              <span>01</span>
+              <h3>Industrial Building Requirements</h3>
+              <p>Project discussion for industrial structures, sheds, storage and operational spaces.</p>
+            </article>
+
+            <article class="reveal reveal-delay-1">
+              <span>02</span>
+              <h3>Warehouse & Storage Requirements</h3>
+              <p>Requirement-based support for warehouse, storage and covered-structure project enquiries.</p>
+            </article>
+
+            <article class="reveal reveal-delay-2">
+              <span>03</span>
+              <h3>Custom Project Scope</h3>
+              <p>Material, fabrication, supply, installation and erection scope must be confirmed project by project.</p>
+            </article>
+
+            <article class="reveal reveal-delay-3">
+              <span>04</span>
+              <h3>Quotation & Coordination</h3>
+              <p>Commercial proposal and execution timeline prepared based on approved project inputs.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-types">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Suitable requirements</span>
+          <h2 class="section-title">Tell us what you are planning to build.</h2>
+          <p class="section-copy">
+            The final solution must match the actual scope confirmed by CGR and the project team.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="project-card reveal">
+            <span>01</span>
+            <div>
+              <h3>Industrial Sheds</h3>
+              <p>Project-oriented structural requirements for manufacturing, operational or covered spaces.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay-1">
+            <span>02</span>
+            <div>
+              <h3>Warehouse Structures</h3>
+              <p>Requirement-based support for storage and warehouse building discussions.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay-2">
+            <span>03</span>
+            <div>
+              <h3>Custom Building Projects</h3>
+              <p>Fabrication planning for site-specific commercial or industrial building requirements.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="important-note reveal">
+          <strong>Important:</strong> Do not publish commitments for full design,
+          structural engineering, erection, roofing, cladding or civil work unless
+          CGR confirms those services are included for the specific project.
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="wrap cta-layout">
+        <div class="reveal">
+          <span class="eyebrow">Start your building enquiry</span>
+          <h2 class="section-title">Planning a pre-engineered building requirement?</h2>
+          <p class="section-copy">
+            Send building dimensions, intended use, location and drawings for an initial discussion.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-2" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="tel:+919790222381">Call +91 97902 22381</a>
+          <a class="btn" style="background:#1b1407;color:#fff;" href="mailto:sn@cgrfc.com?subject=Pre-Engineered%20Building%20Enquiry">Send PEB Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html">
+            <span class="logo-placeholder">LOGO</span>
+            <span>CGR FABRICATION<small>Logo placeholder</small></span>
+          </a>
+          <p style="margin-top:1rem;">Aluminium windows, stage truss, scaffolding and fabrication solutions for projects across Puducherry and beyond.</p>
+        </div>
+
+        <div>
+          <h3>Fabrication</h3>
+          <div class="footer-links">
+            <a href="fabrication.html">Fabrication Overview</a>
+            <a href="heavy-fabrication.html">Heavy Fabrication</a>
+            <a href="architectural-fabrication.html">Architectural Fabrication</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <a href="tel:+919790222381">+91 97902 22381</a>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+            <p>Shop No. 3, 4 & 5 JM Complex,<br>45 Feet Road Extension,<br>Opp. to SBI, New Saram,<br>Puducherry – 605013.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© <span data-year></span> CGR Fabrication. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
