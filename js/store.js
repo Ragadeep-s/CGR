@@ -402,11 +402,9 @@
     };
   }
 
-  function updateBasketBadges() {
+function updateBasketBadges() {
   /*
-   * Count distinct products.
-   * Quantities, variants, and purchase/rental selections
-   * do not increase this header count for the same product.
+   * Count distinct products, not total quantities.
    */
   const count = new Set(
     items.map(function (item) {
@@ -428,7 +426,7 @@
       );
     });
 }
-
+  
   function notifyChange() {
     updateBasketBadges();
 
