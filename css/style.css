@@ -2344,3 +2344,16 @@ html[data-theme="dark"] .quote-section {
     transform: none;
   }
 }
+
+/* Remove the default dropdown arrow from the Products menu. */
+.products-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.products-dropdown summary {
+  list-style: none;
+}
+
+.products-dropdown summary::marker {
+  content: "";
+}
