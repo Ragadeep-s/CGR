@@ -205,25 +205,61 @@
       grid.innerHTML = products.map(function (product) {
         const price = CGR.getStartingPurchasePrice(product);
         const href = escapeHtml(siteUrl(product.page));
+        const previewId = "preview-" + product.id;
+
+        const suppliedSpecification = product.specifications.find(
+          function (specification) {
+            return specification.label === "Specification supplied";
+          }
+        );
+
+        const specificationText = suppliedSpecification
+          ? suppliedSpecification.value
+          : "To be confirmed";
+
+        const previewText = specificationText === "To be confirmed"
+          ? product.groupLabel +
+            ". Variant dimensions and specifications to be confirmed."
+          : specificationText;
 
         return `
-          <article class="product-card">
-            <a class="product-card-image" href="${href}">
-              ${imageMarkup(
-                product.images[0],
-                product.name,
-                'loading="lazy"'
-              )}
-            </a>
+          <article class="product-card custom-product-card">
+
+            <div class="product-preview-area">
+              <a
+                class="product-card-image"
+                href="${href}"
+                aria-describedby="${escapeHtml(previewId)}"
+              >
+                ${imageMarkup(
+                  product.images[0],
+                  product.name,
+                  'loading="lazy"'
+                )}
+              </a>
+
+              <div
+                class="product-hover-preview"
+                id="${escapeHtml(previewId)}"
+              >
+                <span class="preview-heading">
+                  Quick Specification
+                </span>
+
+                <p>${escapeHtml(previewText)}</p>
+              </div>
+            </div>
 
             <div class="product-card-body">
               <div class="badge-group">
-                <span class="badge">Purchase only</span>
-                <span class="badge badge-outline">Demo data</span>
+                <span class="badge">Purchase Only</span>
+                <span class="badge badge-outline">Demo Data</span>
               </div>
 
               <h2>
-                <a href="${href}">${escapeHtml(product.name)}</a>
+                <a href="${href}">
+                  ${escapeHtml(product.name)}
+                </a>
               </h2>
 
               <p class="product-card-description">
@@ -231,16 +267,22 @@
               </p>
 
               <div class="product-card-price">
-                ${price === null ? "Price on enquiry" : "From " + money(price)}
+                ${price === null
+                  ? "Price on enquiry"
+                  : "From " + money(price)}
+
                 <small>
-                  Demo purchase amount. Select a variant for its price and unit.
+                  Demo purchase amount.
+                  Open the product to select a variant and price unit.
                 </small>
               </div>
 
               <a class="button button-primary" href="${href}">
-                Select Variant
+                View Details
+                <span aria-hidden="true">→</span>
               </a>
             </div>
+
           </article>
         `;
       }).join("");
