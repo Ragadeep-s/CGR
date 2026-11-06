@@ -131,7 +131,10 @@
         "The options below are demonstration entries; final dimensions, " +
         "components, technical specifications, and prices will be added later.",
 
-      images: [],
+      images: [
+        "images/aluminium-scaffolding/1.jpg",
+        "images/aluminium-scaffolding/2.jpg",
+        "images/aluminium-scaffolding/3.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
@@ -204,7 +207,10 @@
         "Final deck dimensions, support arrangements, components, " +
         "technical specifications, and prices must be confirmed.",
 
-      images: [],
+      images: [
+        "images/aluminium-stage/1.jpg",
+        "images/aluminium-stage/2.jpg",
+        "images/aluminium-stage/3.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
@@ -276,7 +282,10 @@
         "These demonstration entries will be replaced with your final " +
         "system dimensions, component lists, specifications, and prices.",
 
-      images: [],
+      images: [
+        "images/ringlock-scaffolding/1.jpg",
+        "images/ringlock-scaffolding/2.jpg",
+        "images/ringlock-scaffolding/3.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
