@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="View CGR custom product images, specifications, variants and purchase amounts."
+  >
+
+  <meta name="theme-color" content="#f7f8fa">
+
+  <title>Product Details | CGR Fabrication</title>
+
+  <!-- Light is the initial default; saved preferences are restored. -->
+  <script src="../js/theme.js"></script>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Keep this loading order. -->
+  <script src="../js/products.js" defer></script>
+  <script src="../js/store.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/basket-button.js?v=1" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="CGR home"
+      >
+        <span class="brand-mark">CGR</span>
+
+        <span class="brand-text">
+          <span class="brand-name">CGR Fabrication</span>
+
+          <span class="brand-caption">
+            Aluminium • Fabrication • Project Solutions
+          </span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+
+        <details class="products-dropdown">
+          <summary>Products</summary>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-scaffolding.html">
+              Aluminium Scaffolding
+            </a>
+
+            <a href="aluminium-stage.html">
+              Aluminium Stage
+            </a>
+
+            <a href="ringlock-scaffolding.html">
+              Ringlock Scaffolding
+            </a>
+
+            <a href="custom-products.html">
+              Custom Products
+            </a>
+          </div>
+        </details>
+
+        <a href="fabrication.html">Fabrication</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >
+          <span data-theme-icon aria-hidden="true">◐</span>
+          <span data-theme-label>Dark</span>
+        </button>
+
+        <a class="basket-link" href="basket.html">
+          <span>Basket</span>
+
+          <span
+            class="basket-count"
+            data-basket-count
+            aria-label="Products in basket"
+          >0</span>
+        </a>
+
+        <a
+          class="button button-primary header-quote"
+          href="#quote"
+        >
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Preview notice -->
+    <div class="demo-banner" role="note">
+      <div class="container">
+        Preview catalogue: prices, generated variants,
+        and specifications are demonstration information,
+        not valid quotations.
+      </div>
+    </div>
+
+    <!--
+      main.js replaces the heading and final breadcrumb
+      with the selected product name.
+    -->
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="custom-products.html">Custom Products</a>
+            </li>
+
+            <li aria-current="page" data-product-breadcrumb>
+              Product Details
+            </li>
+          </ol>
+        </nav>
+
+        <p class="eyebrow">Custom Products · Purchase Only</p>
+
+        <h1 id="page-title" data-product-title>
+          Product Details
+        </h1>
+
+        <p>
+          View the product images, select a variant,
+          review its purchase amount, and choose the quantity
+          to add to your basket.
+        </p>
+
+        <a class="text-link" href="custom-products.html">
+          <span aria-hidden="true">←</span>
+          Back to Custom Products
+        </a>
+
+      </div>
+    </section>
+
+    <!--
+      No fixed data-product-id is needed here.
+
+      main.js reads the selected product from the URL:
+      product.html?id=custom-01
+      product.html?id=custom-02
+      ...
+      product.html?id=custom-44
+
+      It renders:
+      - Product image gallery
+      - Description
+      - Variant selector
+      - Purchase amount and unit
+      - Quantity
+      - Add to Basket
+      - Product and variant specifications
+
+      basket-button.js manages the View Basket link.
+    -->
+    <section
+      class="section"
+      aria-label="Product images, purchase options and specifications"
+    >
+      <div class="container">
+
+        <noscript>
+          <div class="notice">
+            JavaScript is required to display this product's
+            images, variants, purchase amounts, and basket controls.
+            Please enable JavaScript and reload this page,
+            or contact CGR using the details below.
+          </div>
+        </noscript>
+
+        <div id="product-detail">
+          <p class="notice">
+            Loading product information. If this message remains
+            visible, the product scripts have not finished
+            loading successfully. You can still contact CGR below.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Purchase notes -->
+    <section
+      class="section section-muted"
+      aria-labelledby="purchase-notes-title"
+    >
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">Before You Proceed</p>
+
+          <h2 id="purchase-notes-title">
+            Check the variant and included parts.
+          </h2>
+        </div>
+
+        <div class="prose">
+          <p>
+            The displayed amount applies to the selected variant
+            and its listed price unit. Confirm whether your
+            requirement is per piece, pair, set, or assembly
+            before ordering.
+          </p>
+
+          <p>
+            Generated variant options and prices are currently
+            demonstration information. Final dimensions,
+            materials, finish, compatibility, component inclusions,
+            and availability require confirmation.
+          </p>
+
+          <p>
+            GST, delivery, and other additional charges are not
+            calculated in the preview basket. Adding an item
+            does not place an order or reserve stock.
+            Online payments are not enabled.
+          </p>
+
+          <div class="button-group">
+            <a class="button button-primary" href="basket.html">
+              Review Your Basket
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="custom-products.html"
+            >
+              Continue Browsing
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Enquiry guidance -->
+    <section class="section" aria-labelledby="enquiry-details-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Need More Information?</p>
+
+            <h2 id="enquiry-details-title">
+              Include the details that identify your requirement.
+            </h2>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+
+          <article class="step-card">
+            <span class="step-number">01</span>
+
+            <h3>Product & Variant</h3>
+
+            <p>
+              Include the product name and selected variant.
+              Add required measurements or a reference drawing
+              where relevant.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+
+            <h3>Quantity & Application</h3>
+
+            <p>
+              State how many pieces or sets you require
+              and describe the intended application or
+              existing equipment involved.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+
+            <h3>Location & Timeline</h3>
+
+            <p>
+              Provide the delivery location and preferred
+              timeline so availability and applicable
+              charges can be discussed.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section
+      class="quote-section"
+      id="quote"
+      aria-labelledby="quote-title"
+    >
+      <div class="container quote-grid">
+
+        <div>
+          <p class="eyebrow">Start a Conversation</p>
+
+          <h2 id="quote-title">
+            Discuss this product with CGR.
+          </h2>
+
+          <p>
+            Include the product name, variant, quantity,
+            and any drawings or reference images in your enquiry.
+            Attach relevant files to your email before sending.
+          </p>
+        </div>
+
+        <div class="quote-actions">
+          <a class="button quote-call" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+
+          <a
+            class="button button-dark"
+            href="mailto:sn@cgrfc.com?subject=Custom%20Product%20Enquiry"
+          >
+            Send an Enquiry
+          </a>
+
+          <a class="quote-email" href="mailto:sn@cgrfc.com">
+            sn@cgrfc.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">CGR</span>
+
+          <span class="brand-text">
+            <span class="brand-name">CGR Fabrication</span>
+
+            <span class="brand-caption">
+              Aluminium • Fabrication • Project Solutions
+            </span>
+          </span>
+        </a>
+
+        <p>
+          Explore aluminium scaffolding, stage systems,
+          ringlock scaffolding, custom products,
+          and project-specific fabrication.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <h2 class="footer-heading">Explore</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="../index.html#products">Our Products</a>
+          </li>
+
+          <li>
+            <a href="custom-products.html">Custom Products</a>
+          </li>
+
+          <li>
+            <a href="fabrication.html">Fabrication Services</a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">Made for Real Projects</a>
+          </li>
+
+          <li>
+            <a href="../index.html#how-it-works">How It Works</a>
+          </li>
+
+          <li>
+            <a href="basket.html">Basket</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+919790222381">
+              +91 97902 22381
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:sn@cgrfc.com">
+              sn@cgrfc.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CGR Fabrication. All rights reserved.</p>
+      <p>Aluminium • Fabrication • Project Solutions</p>
+    </div>
+  </footer>
+</body>
+</html>
