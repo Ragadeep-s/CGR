@@ -1,14 +1,11 @@
 /*
  * CGR — Product catalogue
  *
- * IMPORTANT:
- * All prices, rental terms, and generated variant details are DEMO DATA.
- * They are not quotations, verified specifications, or availability claims.
+ * All prices, generated variants, specifications and rental
+ * terms are DEMO DATA, not quotations or availability claims.
  *
  * Image paths are relative to the website root.
- * Pages inside /pages must resolve these using "../".
- *
- * Edit catalogue data here rather than separately editing every HTML page.
+ * Edit product information in this file.
  */
 
 (function () {
@@ -31,53 +28,12 @@
 
     basketStorageKey: "cgr-basket-v1",
 
-    /*
-     * Leave contact details blank until confirmed.
-     * No enquiry should be sent to an invented contact.
-     */
     contact: {
-  whatsappNumber: "+919790222381",
-  email: "sn@cgrfc.com"
-}
+      whatsappNumber: "+919790222381",
+      phoneNumber: "+919790222381",
+      email: "sn@cgrfc.com"
     }
   };
-
-  /*
-   * SHARED DATA FORMAT
-   *
-   * Product:
-   *   id
-   *   name
-   *   slug
-   *   category
-   *   categoryLabel
-   *   type                "main" or "custom"
-   *   page
-   *   description
-   *   images              root-relative image paths
-   *   purchaseEnabled
-   *   rentalEnabled
-   *   isDemo
-   *   specifications      [{ label, value }]
-   *   variants
-   *
-   * Variant:
-   *   id
-   *   name
-   *   purchasePrice       number in rupees, not paise
-   *   purchaseUnit
-   *   rental              object or null
-   *   specifications      [{ label, value }]
-   *   isDemo
-   *
-   * Rental:
-   *   rate                number in rupees
-   *   period              "day", "week", or "month"
-   *   minimumPeriods
-   *   deposit             null means not confirmed
-   *   deliveryNote
-   *   installationNote
-   */
 
   function slugify(value) {
     return String(value)
@@ -94,12 +50,10 @@
       period: period,
       minimumPeriods: minimumPeriods,
 
-      /*
-       * Unknown charges are not treated as zero.
-       */
       deposit: null,
       deliveryNote: "Delivery and collection charges to be confirmed.",
-      installationNote: "Installation requirements and charges to be confirmed.",
+      installationNote:
+        "Installation requirements and charges to be confirmed.",
 
       isDemo: true
     };
@@ -146,18 +100,18 @@
   /*
    * MAIN PRODUCTS
    *
-   * Empty image arrays are intentional.
-   * The interface will display an image placeholder.
+   * Main-product photo locations have not been confirmed.
+   * Empty image arrays display a placeholder.
    *
-   * Later, replace:
-   *   images: []
+   * When the actual files are uploaded, replace the empty
+   * array with their real website-root-relative paths.
    *
-   * With your real paths, for example:
-   *   images: [
-   *     "images/aluminium-stage/1.jpg",
-   *     "images/aluminium-stage/2.jpg",
-   *     "images/aluminium-stage/3.jpg"
-   *   ]
+   * Example only:
+   * images: [
+   *   "images/aluminium-scaffolding/1.jpg",
+   *   "images/aluminium-scaffolding/2.jpg",
+   *   "images/aluminium-scaffolding/3.jpg"
+   * ]
    */
 
   const MAIN_PRODUCTS = [
@@ -335,7 +289,8 @@
         },
         {
           label: "System specifications",
-          value: "Material, finish, dimensions, and connections to be confirmed"
+          value:
+            "Material, finish, dimensions, and connections to be confirmed"
         },
         {
           label: "Purchase pricing",
@@ -380,19 +335,12 @@
   ];
 
   /*
-   * CUSTOM PRODUCT SOURCE LIST
+   * CUSTOM PRODUCTS
    *
-   * folder:
-   *   Matches your numbered image folder.
+   * folder matches images/1/ through images/44/.
+   * Product order and supplied names are preserved.
    *
-   * demoPrice:
-   *   Base purchase amount for the first demo variant.
-   *   It is not a researched or final selling price.
-   *
-   * suppliedSpecification:
-   *   Uses dimensions or wording from your supplied product title only.
-   *
-   * Product names are preserved as supplied.
+   * demoPrice is a placeholder amount, not a final selling price.
    */
 
   const CUSTOM_PRODUCT_ROWS = [
@@ -724,42 +672,15 @@
   ];
 
   const CUSTOM_GROUPS = [
-    {
-      id: "scaffolding-components",
-      name: "Scaffolding Components"
-    },
-    {
-      id: "stage-components",
-      name: "Stage Components"
-    },
-    {
-      id: "ringlock-components",
-      name: "Ringlock Components"
-    },
-    {
-      id: "clamps-connectors",
-      name: "Clamps & Connectors"
-    },
-    {
-      id: "pins-fasteners",
-      name: "Pins & Fasteners"
-    },
-    {
-      id: "base-support",
-      name: "Base & Support Components"
-    },
-    {
-      id: "wheels-accessories",
-      name: "Wheels & Accessories"
-    },
-    {
-      id: "frames-platforms",
-      name: "Frames & Platforms"
-    },
-    {
-      id: "towers",
-      name: "Scaffolding Towers"
-    }
+    { id: "scaffolding-components", name: "Scaffolding Components" },
+    { id: "stage-components", name: "Stage Components" },
+    { id: "ringlock-components", name: "Ringlock Components" },
+    { id: "clamps-connectors", name: "Clamps & Connectors" },
+    { id: "pins-fasteners", name: "Pins & Fasteners" },
+    { id: "base-support", name: "Base & Support Components" },
+    { id: "wheels-accessories", name: "Wheels & Accessories" },
+    { id: "frames-platforms", name: "Frames & Platforms" },
+    { id: "towers", name: "Scaffolding Towers" }
   ];
 
   function getGroupName(groupId) {
@@ -771,15 +692,13 @@
   }
 
   /*
-   * CUSTOM VARIANTS
+   * Demo variants only.
    *
-   * Each product starts with two clearly labelled demo options.
+   * The alternate price is generated to demonstrate price changes.
+   * It is not a pricing recommendation.
    *
-   * We do not invent dimensions, load capacities, grades, or
-   * compatibility claims for the alternate option.
-   *
-   * Replace these generated options with actual variant objects
-   * using the row's "variants" property when final details arrive.
+   * Add a real "variants" array to a custom product row
+   * when final variant information becomes available.
    */
 
   function makeCustomVariants(row, productId) {
@@ -794,13 +713,13 @@
 
         purchasePrice: row.demoPrice,
         purchaseUnit: row.unit,
-
         rental: null,
 
         specifications: [
           {
             label: "Variant",
-            value: row.suppliedSpecification || "Standard option — placeholder"
+            value:
+              row.suppliedSpecification || "Standard option — placeholder"
           },
           {
             label: "Final specification",
@@ -810,14 +729,12 @@
 
         isDemo: true
       },
-
       {
         id: productId + "-alternate",
         name: "Alternate Option — Demo",
 
         purchasePrice: Math.round(row.demoPrice * 1.25),
         purchaseUnit: row.unit,
-
         rental: null,
 
         specifications: [
@@ -854,7 +771,6 @@
       groupLabel: getGroupName(row.group),
 
       type: "custom",
-
       page: "pages/product.html?id=" + productId,
 
       description:
@@ -896,21 +812,12 @@
         }
       ],
 
-      /*
-       * To define actual variants later, add a "variants" array
-       * to the corresponding row above.
-       */
       variants: row.variants || makeCustomVariants(row, productId)
     };
   }
 
   const CUSTOM_PRODUCTS = CUSTOM_PRODUCT_ROWS.map(makeCustomProduct);
-
   const ALL_PRODUCTS = MAIN_PRODUCTS.concat(CUSTOM_PRODUCTS);
-
-  /*
-   * LOOKUP AND DISPLAY HELPERS
-   */
 
   function getProduct(productId) {
     return ALL_PRODUCTS.find(function (product) {
@@ -998,13 +905,6 @@
     return product ? product.page : null;
   }
 
-  /*
-   * DATA VALIDATION
-   *
-   * Reports catalogue mistakes in the browser console.
-   * No external requests or changes are made.
-   */
-
   function validateCatalogue() {
     const errors = [];
     const productIds = new Set();
@@ -1021,12 +921,19 @@
 
       productIds.add(product.id);
 
-      if (!product.name || !product.variants.length) {
+      if (
+        !product.name ||
+        !Array.isArray(product.variants) ||
+        !product.variants.length
+      ) {
         errors.push("Missing name or variants: " + product.id);
+        return;
       }
 
       if (product.type === "custom" && product.rentalEnabled) {
-        errors.push("Custom products must be purchase-only: " + product.id);
+        errors.push(
+          "Custom products must be purchase-only: " + product.id
+        );
       }
 
       product.variants.forEach(function (variant) {
@@ -1070,10 +977,8 @@
   }
 
   /*
-   * PUBLIC CATALOGUE API
-   *
-   * The next scripts will use window.CGR.
-   * No modules or build tools are required.
+   * Public API used by store.js and main.js.
+   * Keep these property names unchanged.
    */
 
   window.CGR = {
