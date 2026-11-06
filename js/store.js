@@ -403,17 +403,31 @@
   }
 
   function updateBasketBadges() {
-    const count = getSummary().itemCount;
+  /*
+   * Count distinct products.
+   * Quantities, variants, and purchase/rental selections
+   * do not increase this header count for the same product.
+   */
+  const count = new Set(
+    items.map(function (item) {
+      return item.productId;
+    })
+  ).size;
 
-    document.querySelectorAll("[data-basket-count]")
-      .forEach(function (badge) {
-        badge.textContent = String(count);
-        badge.setAttribute(
-          "aria-label",
-          count + (count === 1 ? " item in basket" : " items in basket")
-        );
-      });
-  }
+  document.querySelectorAll("[data-basket-count]")
+    .forEach(function (badge) {
+      badge.textContent = String(count);
+
+      badge.setAttribute(
+        "aria-label",
+        count + (
+          count === 1
+            ? " product in basket"
+            : " products in basket"
+        )
+      );
+    });
+}
 
   function notifyChange() {
     updateBasketBadges();
