@@ -36,9 +36,9 @@
      * No enquiry should be sent to an invented contact.
      */
     contact: {
-      whatsappNumber: "",
-      phoneNumber: "",
-      email: ""
+  whatsappNumber: "+919790222381",
+  email: "sn@cgrfc.com"
+}
     }
   };
 
