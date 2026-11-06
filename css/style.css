@@ -1978,3 +1978,276 @@ summary {
     box-shadow: none;
   }
 }
+
+/* ==========================================
+   Company homepage, header actions and themes
+   ========================================== */
+
+.header-inner {
+  flex-wrap: wrap;
+  padding-block: 16px;
+  gap: 18px 24px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-quote {
+  min-height: 44px;
+  padding: 11px 16px;
+  white-space: nowrap;
+}
+
+.brand-caption {
+  display: block;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+}
+
+[data-theme-icon] {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.company-headline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 5.7vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.company-headline em {
+  color: var(--color-primary);
+  font-weight: inherit;
+}
+
+.quote-section {
+  padding-block: 88px;
+  background: #f5ab18;
+  color: #191710;
+  scroll-margin-top: 16px;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.quote-section h2 {
+  max-width: 800px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 500;
+}
+
+.quote-section .eyebrow {
+  color: #594315;
+}
+
+.quote-section p:not(.eyebrow) {
+  max-width: 740px;
+  margin-bottom: 0;
+  color: #493a1c;
+}
+
+.quote-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.quote-call {
+  border-color: rgb(25 23 16 / 30%);
+  background: transparent;
+  color: #191710;
+}
+
+.quote-call:hover {
+  background: rgb(255 255 255 / 18%);
+}
+
+.quote-email {
+  width: 100%;
+  color: #33260e;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Default theme is light. */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #101416;
+  --color-surface: #171d21;
+  --color-surface-muted: #1c2429;
+  --color-text: #eef1ef;
+  --color-muted: #b0bbc2;
+  --color-border: #344047;
+
+  --color-primary: #ffb229;
+  --color-primary-hover: #ffc45a;
+  --color-primary-soft: #352b18;
+
+  --color-success: #86d5ac;
+  --color-success-soft: #183629;
+  --color-danger: #ff9b9b;
+
+  --shadow-small: 0 4px 16px rgb(0 0 0 / 12%);
+  --shadow-medium: 0 16px 40px rgb(0 0 0 / 24%);
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgb(16 20 22 / 97%);
+}
+
+html[data-theme="dark"] .button-primary {
+  color: #191710;
+}
+
+html[data-theme="dark"] .demo-banner {
+  border-color: #594820;
+  background: #302818;
+  color: #f1d694;
+}
+
+html[data-theme="dark"] .field input,
+html[data-theme="dark"] .field select,
+html[data-theme="dark"] .field textarea,
+html[data-theme="dark"] .form-control {
+  border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .quantity-control input {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Product photos retain a white background in both themes. */
+
+html[data-theme="dark"] .product-card-image,
+html[data-theme="dark"] .gallery-main,
+html[data-theme="dark"] .gallery-thumbnail,
+html[data-theme="dark"] .basket-item-image {
+  background: #fff;
+}
+
+html[data-theme="dark"] .quote-section {
+  color: #191710;
+}
+
+@media (min-width: 861px) and (max-width: 1250px) {
+  .header-inner .site-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-inner > .brand {
+    order: 1;
+  }
+
+  .header-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .header-actions .basket-link {
+    order: initial;
+    margin-left: 0;
+  }
+
+  .header-inner .site-nav {
+    order: 3;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .quote-section {
+    padding-block: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-offset: 220px;
+  }
+
+  .header-inner {
+    gap: 12px;
+  }
+
+  .header-inner > .brand {
+    width: 100%;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  .header-quote {
+    min-height: 40px;
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+
+  .theme-toggle {
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .brand-caption {
+    font-size: 0.6rem;
+  }
+
+  .company-headline {
+    font-size: clamp(2.8rem, 11vw, 4rem);
+  }
+
+  .quote-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
