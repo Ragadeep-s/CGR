@@ -431,14 +431,24 @@
 
             <p class="small-text" id="selection-total" role="status"></p>
 
-            <button
-              class="button button-primary button-full"
-              type="submit"
-            >
-              Add to Basket
-            </button>
+<button
+  class="button button-primary button-full"
+  type="submit"
+>
+  Add to Basket
+</button>
 
-            <p class="status-message" id="product-status" role="status"></p>
+<a
+  id="view-basket-button"
+  class="button button-secondary button-full"
+  href="${escapeHtml(siteUrl("pages/basket.html"))}"
+  hidden
+>
+  View Basket
+  <span aria-hidden="true">→</span>
+</a>
+
+<p class="status-message" id="product-status" role="status"></p>
 
             <p class="small-text">
               Demo amounts only. Taxes and additional charges are not
