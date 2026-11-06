@@ -586,11 +586,11 @@
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-
+    
       if (!form.reportValidity()) {
         return;
       }
-
+    
       try {
         CGR.store.addItem({
           productId: product.id,
@@ -599,16 +599,49 @@
           quantity: Number(quantityInput.value),
           rentalPeriods: Number(durationInput.value)
         });
-
+    
+        /*
+         * Reveal the existing button.
+         * If it was accidentally omitted from the form template,
+         * create it directly below Add to Basket.
+         */
+        let viewBasketButton = form.querySelector(
+          "#view-basket-button"
+        );
+    
+        if (!viewBasketButton) {
+          viewBasketButton = document.createElement("a");
+    
+          viewBasketButton.id = "view-basket-button";
+    
+          viewBasketButton.className =
+            "button button-secondary button-full";
+    
+          viewBasketButton.href = siteUrl("pages/basket.html");
+    
+          viewBasketButton.textContent = "View Basket →";
+    
+          const addButton = form.querySelector(
+            'button[type="submit"]'
+          );
+    
+          addButton.insertAdjacentElement(
+            "afterend",
+            viewBasketButton
+          );
+        }
+    
+        viewBasketButton.hidden = false;
+    
         status.classList.remove("error-message");
         status.textContent = "Added to your basket.";
+    
         showToast(product.name + " added to basket.");
       } catch (error) {
         status.classList.add("error-message");
         status.textContent = error.message;
       }
     });
-
     root.addEventListener("click", function (event) {
       const thumbnail = event.target.closest("[data-gallery-index]");
 
