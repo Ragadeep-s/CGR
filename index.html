@@ -10,12 +10,15 @@
 
   <meta
     name="description"
-    content="Explore CGR aluminium scaffolding, aluminium stage systems, ringlock scaffolding, and custom products."
+    content="CGR Fabrication — Aluminium, Fabrication and Project Solutions. Explore scaffolding, stage systems, custom products and fabrication services."
   >
 
-  <meta name="theme-color" content="#101820">
+  <meta name="theme-color" content="#f7f8fa">
 
-  <title>CGR | Scaffolding, Stage & Custom Products</title>
+  <title>CGR Fabrication | Aluminium • Fabrication • Project Solutions</title>
+
+  <!-- Load before the stylesheet to apply the saved theme early. -->
+  <script src="js/theme.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -29,7 +32,6 @@
     Skip to content
   </a>
 
-  <!-- Shared site header -->
   <header class="site-header">
     <div class="container header-inner">
 
@@ -39,15 +41,13 @@
         <span class="brand-text">
           <span class="brand-name">CGR Fabrication</span>
           <span class="brand-caption">
-            Scaffolding · Stage · Custom Products
+            Aluminium • Fabrication • Project Solutions
           </span>
         </span>
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">
-          Home
-        </a>
+        <a href="index.html" aria-current="page">Home</a>
 
         <details class="products-dropdown">
           <summary>Products</summary>
@@ -56,94 +56,105 @@
             <a href="pages/aluminium-scaffolding.html">
               Aluminium Scaffolding
             </a>
-
             <a href="pages/aluminium-stage.html">
               Aluminium Stage
             </a>
-
             <a href="pages/ringlock-scaffolding.html">
               Ringlock Scaffolding
             </a>
-
             <a href="pages/custom-products.html">
               Custom Products
             </a>
           </div>
         </details>
 
+        <a href="pages/fabrication.html">Fabrication</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="basket-link" href="pages/basket.html">
-        <span>Basket</span>
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >
+          <span data-theme-icon aria-hidden="true">◐</span>
+          <span data-theme-label>Dark</span>
+        </button>
 
-        <span
-          class="basket-count"
-          data-basket-count
-          aria-label="Items in basket"
-        >0</span>
-      </a>
+        <a class="basket-link" href="pages/basket.html">
+          <span>Basket</span>
+          <span
+            class="basket-count"
+            data-basket-count
+            aria-label="Items in basket"
+          >0</span>
+        </a>
+
+        <a class="button button-primary header-quote" href="#contact">
+          Request a Quote
+        </a>
+      </div>
 
     </div>
   </header>
 
   <main id="main-content">
 
-    <!-- Temporary pricing notice -->
     <div class="demo-banner" role="note">
       <div class="container">
-        Preview catalogue: prices, variants, specifications, and rental
-        terms are demonstration information and are not valid quotations.
+        Preview catalogue: product prices, generated variants,
+        specifications, and rental terms are demonstration information,
+        not valid quotations.
       </div>
     </div>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Company introduction -->
+    <section class="hero company-hero">
       <div class="container hero-grid">
 
         <div class="hero-content">
           <p class="eyebrow">
-            Aluminium · Stage Systems · Scaffolding
+            Aluminium • Fabrication • Project Solutions
           </p>
 
-          <h1>
-            Find the right system.
-            Choose the right components.
+          <h1 class="company-headline">
+            Built in aluminium.<br>
+            Made for <em>real work.</em>
           </h1>
 
           <p class="hero-description">
-            Explore aluminium scaffolding, aluminium stage systems,
-            and ringlock scaffolding for purchase or rental.
-            Browse custom products and components available to buy.
+            From aluminium scaffolding and stage systems to ringlock
+            scaffolding, components, and project-specific fabrication,
+            explore solutions around your requirements.
           </p>
 
           <div class="button-group">
-            <a class="button button-primary" href="#products">
-              Explore Products
+            <a class="button button-primary" href="#contact">
+              Request a Quote <span aria-hidden="true">→</span>
             </a>
 
-            <a
-              class="button button-secondary"
-              href="pages/custom-products.html"
-            >
-              Browse Custom Products
+            <a class="button button-secondary" href="#products">
+              Explore Products
             </a>
           </div>
 
-          <ul class="hero-highlights" aria-label="Catalogue options">
-            <li>Variant selection</li>
-            <li>Purchase and rental options</li>
-            <li>Product basket</li>
+          <ul class="hero-highlights" aria-label="Our focus">
+            <li>Aluminium Scaffolding</li>
+            <li>Stage Systems</li>
+            <li>Fabrication</li>
           </ul>
         </div>
 
         <aside class="hero-panel" aria-labelledby="catalogue-heading">
-          <p class="eyebrow">Explore the catalogue</p>
+          <p class="eyebrow">Products & Components</p>
 
           <h2 id="catalogue-heading">
-            Three main categories.
-            One custom collection.
+            Find the system.<br>
+            Choose the components.
           </h2>
 
           <div class="category-shortcuts">
@@ -173,26 +184,27 @@
           </div>
 
           <p class="small-text">
-            44 custom products, with variant-specific purchase pricing.
+            Purchase and rental options for main products.
+            Purchase-only listings for 44 custom products.
           </p>
         </aside>
 
       </div>
     </section>
 
-    <!-- Main product categories -->
+    <!-- Product explanations -->
     <section class="section" id="products">
       <div class="container">
 
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Our main products</p>
-            <h2>Choose your product category</h2>
+            <p class="eyebrow">Our Products</p>
+            <h2>Systems, components, and practical choices.</h2>
           </div>
 
           <p>
-            Compare variants and select purchase or rental
-            on the individual product pages.
+            Explore each category, compare its listed variants,
+            and build a basket around your requirements.
           </p>
         </div>
 
@@ -216,16 +228,13 @@
               <h3>Aluminium Scaffolding</h3>
 
               <p>
-                Explore the available scaffolding variants,
-                specifications, purchase amounts, and rental details.
+                Explore scaffolding configurations and their listed
+                components. Compare variants, purchase amounts,
+                and rental details before discussing the final setup.
               </p>
 
-              <a
-                class="text-link"
-                href="pages/aluminium-scaffolding.html"
-              >
-                View Scaffolding
-                <span aria-hidden="true">→</span>
+              <a class="text-link" href="pages/aluminium-scaffolding.html">
+                Explore Scaffolding <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -248,16 +257,13 @@
               <h3>Aluminium Stage</h3>
 
               <p>
-                Browse stage variants, included components,
-                purchase amounts, and rental options.
+                Browse stage configurations and review the listed
+                deck, frame, and support details. Select a variant
+                to explore purchase or rental amounts.
               </p>
 
-              <a
-                class="text-link"
-                href="pages/aluminium-stage.html"
-              >
-                View Stage Systems
-                <span aria-hidden="true">→</span>
+              <a class="text-link" href="pages/aluminium-stage.html">
+                Explore Stage Systems <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -280,16 +286,13 @@
               <h3>Ringlock Scaffolding</h3>
 
               <p>
-                Compare ringlock variants and review their
-                specifications, purchase amounts, and rental details.
+                Explore ringlock system configurations and component
+                information. Compare the available catalogue options
+                before confirming specifications and availability.
               </p>
 
-              <a
-                class="text-link"
-                href="pages/ringlock-scaffolding.html"
-              >
-                View Ringlock Systems
-                <span aria-hidden="true">→</span>
+              <a class="text-link" href="pages/ringlock-scaffolding.html">
+                Explore Ringlock Systems <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -298,155 +301,215 @@
       </div>
     </section>
 
-    <!-- Custom catalogue -->
-    <section class="section section-muted" id="custom-products">
+    <!-- Custom products -->
+    <section class="section section-muted">
       <div class="container custom-feature">
 
         <div class="custom-feature-content">
           <p class="eyebrow">Custom Products</p>
-
-          <h2>
-            Components, accessories,
-            and individual products.
-          </h2>
+          <h2>The components behind the complete setup.</h2>
 
           <p>
-            Browse 44 products including connectors, clamps,
-            joint pins, stage components, scaffolding parts,
-            frames, and towers.
+            Browse 44 products covering clamps, connectors,
+            joint pins, base supports, stage components,
+            frames, platforms, and towers.
           </p>
 
           <p>
-            Select the required variant, review its purchase amount,
-            and add the item to your basket.
-            Custom products are listed for purchase only.
+            View product images, select a variant, review its
+            purchase amount, and add the required quantity to your basket.
+            Custom-product listings are purchase only.
           </p>
 
           <a
             class="button button-primary"
             href="pages/custom-products.html"
           >
-            Explore All 44 Products
+            Browse Custom Products
           </a>
         </div>
 
         <div class="custom-feature-panel">
           <span class="large-number">44</span>
-          <h3>Products in the custom catalogue</h3>
+          <h3>Custom products in one catalogue</h3>
 
           <ul class="feature-list">
             <li>Product image galleries</li>
-            <li>Variant and size selection</li>
-            <li>Purchase amount per variant</li>
-            <li>Quantity and basket options</li>
+            <li>Variant-specific purchase amounts</li>
+            <li>Search and product-group filters</li>
+            <li>Quantity selection and basket</li>
           </ul>
         </div>
 
       </div>
     </section>
 
-    <!-- Basket flow explanation -->
+    <!-- Project-focused information -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Made for Real Projects</p>
+            <h2>Start with the requirement.<br>Build around the details.</h2>
+          </div>
+
+          <p>
+            Share the dimensions, quantities, intended application,
+            and timeline so the next conversation starts with
+            the information that matters.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Access & Site Requirements</h3>
+            <p>
+              Discuss the working area, access constraints,
+              intended use, and required configuration when
+              enquiring about scaffolding.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Stage & Setup Requirements</h3>
+            <p>
+              Share the required layout, dimensions, component
+              quantities, and setup dates when discussing
+              an aluminium stage.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Fabrication & Components</h3>
+            <p>
+              Send drawings, reference images, measurements,
+              or a component list for a discussion about
+              project-specific fabrication.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fabrication introduction -->
+    <section class="section section-muted" id="fabrication">
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">Fabrication</p>
+          <h2>Have a requirement beyond the catalogue?</h2>
+        </div>
+
+        <div class="prose">
+          <p>
+            Not every project starts with an existing product.
+            Share your required dimensions, drawings, reference
+            images, quantities, and preferred finish with CGR.
+          </p>
+
+          <p>
+            Fabrication scope, materials, feasibility, pricing,
+            and delivery timelines can then be discussed
+            against the actual requirement.
+          </p>
+
+          <a class="button button-primary" href="pages/fabrication.html">
+            Explore Fabrication
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Basket process -->
     <section class="section" id="how-it-works">
       <div class="container">
 
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Your product selection</p>
-            <h2>From catalogue to basket</h2>
+            <p class="eyebrow">How It Works</p>
+            <h2>Browse. Select. Review.</h2>
           </div>
         </div>
 
         <ol class="steps-grid">
           <li class="step-card">
             <span class="step-number" aria-hidden="true">01</span>
-            <h3>Choose a product</h3>
+            <h3>Find Your Product</h3>
             <p>
-              Open a main category or browse the
+              Browse the main categories or search the
               Custom Products catalogue.
             </p>
           </li>
 
           <li class="step-card">
             <span class="step-number" aria-hidden="true">02</span>
-            <h3>Select the details</h3>
+            <h3>Choose the Details</h3>
             <p>
-              Choose the variant and quantity.
-              For main products, select purchase or rental.
+              Select the variant and quantity. For main products,
+              choose purchase or rental and the rental duration.
             </p>
           </li>
 
           <li class="step-card">
             <span class="step-number" aria-hidden="true">03</span>
-            <h3>Review your basket</h3>
+            <h3>Review Your Basket</h3>
             <p>
-              Check your selected products, quantities,
-              and demonstration amounts.
+              Check your selected items and demo subtotals,
+              then contact CGR to discuss your requirements.
             </p>
           </li>
         </ol>
 
         <p class="notice">
-          Online checkout and payments are not enabled in this version.
-          Adding an item to the basket does not place an order
-          or confirm a rental booking.
+          Online payments are not enabled. A basket does not place
+          an order, reserve stock, or confirm a rental booking.
+          Final specifications, availability, amounts, and additional
+          charges require confirmation.
         </p>
 
       </div>
     </section>
 
-    <!-- About -->
-    <section class="section section-muted" id="about">
-      <div class="container about-grid">
+    <!-- Quote and contact -->
+    <section class="quote-section" id="contact">
+      <div class="container quote-grid">
 
         <div>
-          <p class="eyebrow">About CGR</p>
-          <h2>A focused product catalogue.</h2>
-        </div>
+          <p class="eyebrow">Start a Conversation</p>
 
-        <div class="prose">
-          <p>
-            This catalogue brings together CGR’s aluminium scaffolding,
-            aluminium stage, ringlock scaffolding, and custom products.
-          </p>
+          <h2>
+            Need scaffolding, stage systems,
+            or fabrication?
+          </h2>
 
           <p>
-            Explore product variants, compare the displayed amounts,
-            and collect your required items in one basket.
-          </p>
-
-          <p class="small-text">
-            Company background, service locations, and verified
-            product information will be added before launch.
+            Share your project requirement with CGR.
+            Include the product, variant, quantity, and whether
+            you need purchase, rental, or a fabrication quotation.
           </p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container contact-panel">
-
-        <div>
-          <p class="eyebrow">Contact</p>
-
-          <h2>Discuss your product requirements.</h2>
-
-          <p>
-            Official phone, WhatsApp, email, and address details
-            will be added here before launch.
-          </p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="button button-primary" href="pages/basket.html">
-            Review Your Basket
+        <div class="quote-actions">
+          <a class="button quote-call" href="tel:+919790222381">
+            Call +91 97902 22381
           </a>
 
-          <p class="small-text">
-            Contact details pending. No enquiry is submitted
-            from this preview page.
-          </p>
+          <a
+            class="button button-dark"
+            href="mailto:sn@cgrfc.com?subject=CGR%20Product%20and%20Project%20Enquiry"
+          >
+            Send an Enquiry
+          </a>
+
+          <a class="quote-email" href="mailto:sn@cgrfc.com">
+            sn@cgrfc.com
+          </a>
         </div>
 
       </div>
@@ -460,60 +523,53 @@
       <div class="footer-brand">
         <a class="brand" href="index.html">
           <span class="brand-mark">CGR</span>
-          <span class="brand-name">CGR Fabrication</span>
+
+          <span class="brand-text">
+            <span class="brand-name">CGR Fabrication</span>
+            <span class="brand-caption">
+              Aluminium • Fabrication • Project Solutions
+            </span>
+          </span>
         </a>
 
         <p>
-          Aluminium scaffolding, stage systems,
-          ringlock scaffolding, and custom products.
+          Explore aluminium scaffolding, stage systems,
+          ringlock scaffolding, custom products,
+          and project-specific fabrication.
         </p>
       </div>
 
-      <nav aria-label="Footer product navigation">
-        <h2 class="footer-heading">Products</h2>
-
-        <ul class="footer-links">
-          <li>
-            <a href="pages/aluminium-scaffolding.html">
-              Aluminium Scaffolding
-            </a>
-          </li>
-
-          <li>
-            <a href="pages/aluminium-stage.html">
-              Aluminium Stage
-            </a>
-          </li>
-
-          <li>
-            <a href="pages/ringlock-scaffolding.html">
-              Ringlock Scaffolding
-            </a>
-          </li>
-
-          <li>
-            <a href="pages/custom-products.html">
-              Custom Products
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Footer site navigation">
+      <nav aria-label="Footer navigation">
         <h2 class="footer-heading">Explore</h2>
 
         <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#products">Our Products</a></li>
+          <li><a href="pages/custom-products.html">Custom Products</a></li>
+          <li><a href="pages/fabrication.html">Fabrication Services</a></li>
+          <li><a href="#about">Made for Real Projects</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="pages/basket.html">Basket</a></li>
         </ul>
       </nav>
 
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+919790222381">+91 97902 22381</a>
+          </li>
+          <li>
+            <a href="mailto:sn@cgrfc.com">sn@cgrfc.com</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="container footer-bottom">
-      <p>© CGR Fabrication.</p>
-      <p>Preview catalogue. Demo information only.</p>
+      <p>© CGR Fabrication. All rights reserved.</p>
+      <p>Aluminium • Fabrication • Project Solutions</p>
     </div>
   </footer>
 </body>
