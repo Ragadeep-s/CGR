@@ -2251,3 +2251,96 @@ html[data-theme="dark"] .quote-section {
     align-items: stretch;
   }
 }
+
+/* ==========================================
+   Custom catalogue — specification preview
+   ========================================== */
+
+.custom-product-card {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.custom-product-card:hover,
+.custom-product-card:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-medium);
+}
+
+.product-preview-area {
+  position: relative;
+}
+
+/* Keep the preview inside the image area. */
+
+.product-hover-preview {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  z-index: 2;
+
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-medium);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 160ms ease;
+}
+
+.preview-heading {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--color-primary);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.product-hover-preview p {
+  display: -webkit-box;
+  overflow: hidden;
+
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.custom-product-card:hover .product-hover-preview,
+.custom-product-card:focus-within .product-hover-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* On touch devices, do not require hover to read the preview. */
+
+@media (hover: none) {
+  .product-hover-preview {
+    position: static;
+
+    margin: 12px;
+    box-shadow: none;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
