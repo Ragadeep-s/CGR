@@ -134,7 +134,9 @@
       images: [
         "images/aluminium-scaffolding/1.jpg",
         "images/aluminium-scaffolding/2.jpg",
-        "images/aluminium-scaffolding/3.jpg"],
+        "images/aluminium-scaffolding/3.jpg",
+        "images/aluminium-scaffolding/4.jpg",
+        "images/aluminium-scaffolding/5.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
@@ -208,9 +210,11 @@
         "technical specifications, and prices must be confirmed.",
 
       images: [
-        "images/aluminium-stage/1.jpg",
-        "images/aluminium-stage/2.jpg",
-        "images/aluminium-stage/3.jpg"],
+        "images/ringlock-scaffolding/1.jpg",
+        "images/ringlock-scaffolding/2.jpg",
+        "images/ringlock-scaffolding/3.jpg",
+        "images/ringlock-scaffolding/4.jpg",
+        "images/ringlock-scaffolding/5.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
@@ -283,9 +287,11 @@
         "system dimensions, component lists, specifications, and prices.",
 
       images: [
-        "images/ringlock-scaffolding/1.jpg",
-        "images/ringlock-scaffolding/2.jpg",
-        "images/ringlock-scaffolding/3.jpg"],
+        "images/aluminium-stage/1.jpg",
+        "images/aluminium-stage/2.jpg",
+        "images/aluminium-stage/3.jpg",
+        "images/aluminium-stage/4.jpg",
+        "images/aluminium-stage/5.jpg"],
 
       purchaseEnabled: true,
       rentalEnabled: true,
