@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Complete your CGR order with customer details, GST, delivery charge and secure Razorpay payment."
+  >
+
+  <meta name="theme-color" content="#f7f8fa">
+
+  <title>Checkout | CGR Fabrication</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Load config first, then the rest. -->
+  <script src="../js/config.js" defer></script>
+  <script src="../js/products.js" defer></script>
+  <script src="../js/store.js" defer></script>
+  <script src="../js/checkout.js" defer></script>
+
+  <!-- Razorpay checkout script. -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="CGR home"
+      >
+        <span class="brand-mark">CGR</span>
+
+        <span class="brand-text">
+          <span class="brand-name">CGR Fabrication</span>
+          <span class="brand-caption">
+            Aluminium • Fabrication • Project Solutions
+          </span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+
+        <details class="products-dropdown">
+          <summary>Products</summary>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-scaffolding.html">
+              Aluminium Scaffolding
+            </a>
+
+            <a href="aluminium-stage.html">
+              Aluminium Stage
+            </a>
+
+            <a href="ringlock-scaffolding.html">
+              Ringlock Scaffolding
+            </a>
+          </div>
+        </details>
+
+        <a href="fabrication.html">Fabrication</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >
+          <span data-theme-icon aria-hidden="true">◐</span>
+          <span data-theme-label>Dark</span>
+        </button>
+
+        <a
+          class="basket-link"
+          href="basket.html"
+        >
+          <span>Basket</span>
+
+          <span
+            class="basket-count"
+            data-basket-count
+            aria-label="Products in basket"
+          >0</span>
+        </a>
+
+        <a
+          class="button button-primary header-quote"
+          href="#quote"
+        >
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Preview notice -->
+    <div class="demo-banner" role="note">
+      <div class="container">
+        Preview checkout: GST, delivery, and payment settings
+        are demonstration values. Confirm final amounts
+        before processing a live payment.
+      </div>
+    </div>
+
+    <!-- Introduction -->
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="basket.html">Basket</a>
+            </li>
+
+            <li aria-current="page">Checkout</li>
+          </ol>
+        </nav>
+
+        <p class="eyebrow">Complete Your Order</p>
+
+        <h1 id="page-title">Checkout</h1>
+
+        <p>
+          Review your order summary, provide your details,
+          and complete the payment. Delivery will be scheduled
+          after CGR confirms your order.
+        </p>
+
+      </div>
+    </section>
+
+    <!--
+      checkout.js renders the checkout form and order
+      summary inside this container.
+
+      Includes:
+      - Customer details form
+      - Delivery address
+      - Order summary with GST and delivery
+      - Payment selection
+      - Razorpay payment button
+    -->
+    <section
+      class="section"
+      aria-label="Checkout form and order summary"
+    >
+      <div class="container">
+
+        <noscript>
+          <div class="notice">
+            JavaScript is required to display the checkout form
+            and process payments. Please enable JavaScript
+            and reload this page, or contact CGR below.
+          </div>
+        </noscript>
+
+        <div id="checkout-container">
+          <p class="notice">
+            Loading checkout. If this message remains visible,
+            the checkout scripts have not finished
+            loading successfully.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact for delivery scheduling -->
+    <section
+      class="section section-muted"
+      aria-labelledby="delivery-contact-title"
+    >
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">Delivery Information</p>
+
+          <h2 id="delivery-contact-title">
+            Delivery will be scheduled after payment.
+          </h2>
+        </div>
+
+        <div class="prose">
+          <p>
+            The exact delivery date depends on product
+            availability and your location. After completing
+            your payment, call CGR to confirm the delivery
+            schedule for your order.
+          </p>
+
+          <p>
+            The delivery charge included in your order covers
+            standard delivery. Additional charges may apply
+            for remote locations or urgent delivery.
+          </p>
+
+          <a class="button button-primary" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      class="quote-section"
+      id="quote"
+      aria-labelledby="quote-title"
+    >
+      <div class="container quote-grid">
+
+        <div>
+          <p class="eyebrow">Need Help?</p>
+
+          <h2 id="quote-title">
+            Contact CGR for assistance.
+          </h2>
+
+          <p>
+            If you have questions about your order, payment,
+            or delivery, contact CGR before completing
+            the checkout process.
+          </p>
+        </div>
+
+        <div class="quote-actions">
+          <a class="button quote-call" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+
+          <a
+            class="button button-dark"
+            href="mailto:sn@cgrfc.com?subject=Checkout%20Assistance"
+          >
+            Send an Enquiry
+          </a>
+
+          <a class="quote-email" href="mailto:sn@cgrfc.com">
+            sn@cgrfc.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">CGR</span>
+
+          <span class="brand-text">
+            <span class="brand-name">CGR Fabrication</span>
+
+            <span class="brand-caption">
+              Aluminium • Fabrication • Project Solutions
+            </span>
+          </span>
+        </a>
+
+        <p>
+          Explore aluminium scaffolding, stage systems,
+          and ringlock scaffolding for purchase and rental.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <h2 class="footer-heading">Explore</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="../index.html#products">Our Products</a>
+          </li>
+
+          <li>
+            <a href="fabrication.html">Fabrication Services</a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">Made for Real Projects</a>
+          </li>
+
+          <li>
+            <a href="../index.html#how-it-works">How It Works</a>
+          </li>
+
+          <li>
+            <a href="basket.html">Basket</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+919790222381">
+              +91 97902 22381
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:sn@cgrfc.com">
+              sn@cgrfc.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CGR Fabrication. All rights reserved.</p>
+      <p>Aluminium • Fabrication • Project Solutions</p>
+    </div>
+  </footer>
+</body>
+</html>
