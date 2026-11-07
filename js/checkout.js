@@ -62,8 +62,7 @@
       }
 
       if (item.mode === "purchase") {
-        subtotal +=
-          variant.purchasePrice * item.quantity;
+        subtotal += variant.purchasePrice * item.quantity;
       } else if (variant.rental && variant.rental.rate) {
         subtotal +=
           variant.rental.rate *
@@ -93,9 +92,7 @@
   }
 
   function renderOrderSummary(items, summary) {
-    const gstLabel = CONFIG.gst
-      ? CONFIG.gst.label
-      : "GST";
+    const gstLabel = CONFIG.gst ? CONFIG.gst.label : "GST";
 
     const deliveryLabel = CONFIG.delivery
       ? CONFIG.delivery.label
@@ -369,7 +366,7 @@
     });
   }
 
-  function updatePayButton(items, summary) {
+  function updatePayButton(summary) {
     const payButton = document.getElementById("pay-button");
 
     if (!payButton) {
@@ -434,7 +431,7 @@
       ${renderCheckoutForm()}
     `;
 
-    updatePayButton(items, summary);
+    updatePayButton(summary);
 
     const form = document.getElementById("checkout-form");
     const status = document.getElementById("checkout-status");
@@ -512,7 +509,7 @@
           );
         }
 
-        openRazorpayCheckout(data, orderData);
+        openRazorpayCheckout(data, orderData, status);
       })
       .catch(function (error) {
         status.classList.add("error-message");
@@ -522,7 +519,11 @@
       });
   }
 
-  function openRazorpayCheckout(orderData, customerData) {
+  function openRazorpayCheckout(
+    serverOrder,
+    orderData,
+    status
+  ) {
     if (!window.Razorpay) {
       status.classList.add("error-message");
       status.textContent =
@@ -532,7 +533,7 @@
       return;
     }
 
-    const razorpayKey = orderData.keyId;
+    const razorpayKey = serverOrder.keyId;
 
     if (!razorpayKey) {
       status.classList.add("error-message");
@@ -545,21 +546,21 @@
 
     const options = {
       key: razorpayKey,
-      amount: orderData.amount,
+      amount: serverOrder.amount,
       currency: CONFIG.currency || "INR",
       name: "CGR Fabrication",
       description: "Order payment",
-      order_id: orderData.orderId,
+      order_id: serverOrder.orderId,
       handler: function (response) {
-        verifyPayment(response, orderData, customerData);
+        verifyPayment(response, serverOrder, orderData, status);
       },
       prefill: {
-        name: customerData.customer.name,
-        email: customerData.customer.email,
-        contact: customerData.customer.phone
+        name: orderData.customer.name,
+        email: orderData.customer.email,
+        contact: orderData.customer.phone
       },
       notes: {
-        address: customerData.customer.address
+        address: orderData.customer.address
       },
       theme: {
         color: "#1a73e8"
@@ -573,10 +574,7 @@
       status.textContent =
         "Payment failed. Please try again or contact CGR.";
 
-      console.error(
-        "Razorpay payment failed:",
-        response.error
-      );
+      console.error("Razorpay payment failed:", response.error);
     });
 
     razorpay.open();
@@ -584,8 +582,9 @@
 
   function verifyPayment(
     razorpayResponse,
+    serverOrder,
     orderData,
-    customerData
+    status
   ) {
     const apiUrl = CONFIG.apiUrl || "http://localhost:3000";
 
@@ -599,8 +598,10 @@
       },
       body: JSON.stringify({
         razorpayResponse: razorpayResponse,
-        orderData: orderData,
-        customerData: customerData
+        orderId: serverOrder.orderId,
+        amount: serverOrder.amount,
+        customer: orderData.customer,
+        items: orderData.items
       })
     })
       .then(function (response) {
@@ -616,11 +617,11 @@
         if (data && data.success) {
           window.location.href =
             "payment-success.html?orderId=" +
-            encodeURIComponent(data.orderId);
+            encodeURIComponent(serverOrder.orderId);
         } else {
           window.location.href =
             "payment-failed.html?orderId=" +
-            encodeURIComponent(orderData.orderId);
+            encodeURIComponent(serverOrder.orderId);
         }
       })
       .catch(function (error) {
@@ -631,7 +632,7 @@
 
         window.location.href =
           "payment-failed.html?orderId=" +
-          encodeURIComponent(orderData.orderId);
+          encodeURIComponent(serverOrder.orderId);
       });
   }
 
