@@ -1,0 +1,21 @@
+{
+  "name": "cgr-checkout-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CGR demo quote API; payments disabled",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0"
+  }
+}
