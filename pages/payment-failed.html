@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Your CGR payment was not completed. Please try again or contact CGR for assistance."
+  >
+
+  <meta name="theme-color" content="#f7f8fa">
+
+  <title>Payment Failed | CGR Fabrication</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Load config, products, and store to access basket. -->
+  <script src="../js/config.js" defer></script>
+  <script src="../js/products.js" defer></script>
+  <script src="../js/store.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="CGR home"
+      >
+        <span class="brand-mark">CGR</span>
+
+        <span class="brand-text">
+          <span class="brand-name">CGR Fabrication</span>
+
+          <span class="brand-caption">
+            Aluminium • Fabrication • Project Solutions
+          </span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+
+        <details class="products-dropdown">
+          <summary>Products</summary>
+
+          <div class="dropdown-menu">
+            <a href="aluminium-scaffolding.html">
+              Aluminium Scaffolding
+            </a>
+
+            <a href="aluminium-stage.html">
+              Aluminium Stage
+            </a>
+
+            <a href="ringlock-scaffolding.html">
+              Ringlock Scaffolding
+            </a>
+          </div>
+        </details>
+
+        <a href="fabrication.html">Fabrication</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >
+          <span data-theme-icon aria-hidden="true">◐</span>
+          <span data-theme-label>Dark</span>
+        </button>
+
+        <a
+          class="basket-link"
+          href="basket.html"
+        >
+          <span>Basket</span>
+
+          <span
+            class="basket-count"
+            data-basket-count
+            aria-label="Products in basket"
+          >0</span>
+        </a>
+
+        <a
+          class="button button-primary header-quote"
+          href="#retry"
+        >
+          Try Again
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Introduction -->
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="container">
+
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+
+            <li aria-current="page">Payment Failed</li>
+          </ol>
+        </nav>
+
+        <p class="eyebrow">Payment Not Completed</p>
+
+        <h1 id="page-title">Payment Failed</h1>
+
+        <p>
+          Your payment was not completed successfully.
+          Your basket items are still saved.
+        </p>
+
+      </div>
+    </section>
+
+    <!--
+      Payment failure details are shown here.
+      The order ID is read from the URL parameter.
+    -->
+    <section
+      class="section"
+      aria-label="Payment failure details"
+    >
+      <div class="container">
+
+        <div class="payment-status payment-status-failed">
+          <div class="payment-status-icon" aria-hidden="true">
+            ✗
+          </div>
+
+          <h2>Your payment was not completed.</h2>
+
+          <p>
+            No amount has been charged for this order.
+            Your basket items are still saved and you can
+            try the payment again.
+          </p>
+
+          <div class="order-details">
+            <p>
+              <strong>Order Reference:</strong>
+              <span id="order-reference">Loading…</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Common reasons -->
+        <div class="failure-reasons">
+          <h2>Common reasons for payment failure</h2>
+
+          <ul class="failure-reasons-list">
+            <li>
+              Payment was cancelled before completion.
+            </li>
+
+            <li>
+              Insufficient funds in your account.
+            </li>
+
+            <li>
+              Bank or UPI transaction was declined.
+            </li>
+
+            <li>
+              Internet connection was lost during payment.
+            </li>
+
+            <li>
+              Session timed out before payment completed.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Retry actions -->
+        <div class="retry-actions" id="retry">
+          <h2>What would you like to do?</h2>
+
+          <div class="button-group">
+            <a
+              class="button button-primary"
+              href="checkout.html"
+            >
+              Try Payment Again
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="basket.html"
+            >
+              Review Your Basket
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="tel:+919790222381"
+            >
+              Call CGR for Help
+            </a>
+          </div>
+        </div>
+
+        <!-- Important note -->
+        <div class="notice">
+          <strong>Important</strong>
+
+          <p>
+            If your bank account shows a deduction but this
+            page displays a payment failure, contact CGR
+            immediately with your order reference number.
+            Do not attempt the payment again until you have
+            confirmed with CGR.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      class="quote-section"
+      aria-labelledby="quote-title"
+    >
+      <div class="container quote-grid">
+
+        <div>
+          <p class="eyebrow">Need Assistance?</p>
+
+          <h2 id="quote-title">
+            Contact CGR for payment support.
+          </h2>
+
+          <p>
+            If you continue to experience payment issues,
+            contact CGR. Have your order reference number
+            ready when you call or email.
+          </p>
+        </div>
+
+        <div class="quote-actions">
+          <a class="button quote-call" href="tel:+919790222381">
+            Call +91 97902 22381
+          </a>
+
+          <a
+            class="button button-dark"
+            href="mailto:sn@cgrfc.com?subject=Payment%20Assistance"
+          >
+            Send an Enquiry
+          </a>
+
+          <a class="quote-email" href="mailto:sn@cgrfc.com">
+            sn@cgrfc.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">CGR</span>
+
+          <span class="brand-text">
+            <span class="brand-name">CGR Fabrication</span>
+
+            <span class="brand-caption">
+              Aluminium • Fabrication • Project Solutions
+            </span>
+          </span>
+        </a>
+
+        <p>
+          Explore aluminium scaffolding, stage systems,
+          and ringlock scaffolding for purchase and rental.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <h2 class="footer-heading">Explore</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="../index.html#products">Our Products</a>
+          </li>
+
+          <li>
+            <a href="fabrication.html">Fabrication Services</a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">Made for Real Projects</a>
+          </li>
+
+          <li>
+            <a href="../index.html#how-it-works">How It Works</a>
+          </li>
+
+          <li>
+            <a href="basket.html">Basket</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+919790222381">
+              +91 97902 22381
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:sn@cgrfc.com">
+              sn@cgrfc.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CGR Fabrication. All rights reserved.</p>
+      <p>Aluminium • Fabrication • Project Solutions</p>
+    </div>
+  </footer>
+
+  <!--
+    Read the order ID from the URL.
+    Basket is NOT cleared on this page so the customer
+    can retry the payment.
+  -->
+  <script>
+    (function () {
+      "use strict";
+
+      const urlParams = new URLSearchParams(
+        window.location.search
+      );
+
+      const orderId = urlParams.get("orderId");
+
+      const orderReference = document.getElementById(
+        "order-reference"
+      );
+
+      if (orderReference) {
+        orderReference.textContent = orderId
+          ? orderId
+          : "Not available";
+      }
+    })();
+  </script>
+</body>
+</html>
