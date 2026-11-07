@@ -903,13 +903,12 @@
               installation, and rental deposits are not calculated.
             </p>
 
-            <button
-              class="button button-primary button-full"
-              type="button"
-              disabled
-            >
-              Checkout — Coming Later
-            </button>
+            <a
+            class="button button-primary button-full"
+            href="checkout.html"
+          >
+            Proceed to Checkout
+          </a>
 
             <p class="small-text">
               No payment is collected. This basket does not place
